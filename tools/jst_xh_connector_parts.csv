@@ -1,0 +1,29 @@
+Designator,Value,Footprint,LCSC_PART,MOUSER_PART,DIGIKEY_PART,Notes
+J_JST_XH_1x01,JST XH 1-pin,Connector_JST:JST_XH_B1B-XH-AM_1x01_P2.50mm_Vertical,,649-B1B-XH-A,B1B-XH-A(LF)(SN)-ND,Single pin vertical
+J_JST_XH_1x02,JST XH 2-pin,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,,649-B2B-XH-A,B2B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x03,JST XH 3-pin,Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,,649-B3B-XH-A,B3B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x04,JST XH 4-pin,Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical,,649-B4B-XH-A,B4B-XH-A(LF)(SN)-ND,Vertical header - STANDARD
+J_JST_XH_1x04_SMD,JST XH 4-pin SMD,Connector_JST:JST_XH_S4B-XH-SM4-TB_1x04-1MP_P2.50mm_Horizontal,,649-B4B-XH-A,B4B-XH-A(LF)(SN)-ND,Surface mount - STANDARD
+J_JST_XH_1x05,JST XH 5-pin,Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical,,649-B5B-XH-A,B5B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x06,JST XH 6-pin,Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,,649-B6B-XH-A,B6B-XH-A(LF)(SN)-ND,Vertical header - STANDARD
+J_JST_XH_1x07,JST XH 7-pin,Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical,,649-B7B-XH-A,B7B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x08,JST XH 8-pin,Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical,,649-B8B-XH-A,B8B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x09,JST XH 9-pin,Connector_JST:JST_XH_B9B-XH-A_1x09_P2.50mm_Vertical,,649-B9B-XH-A,B9B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x10,JST XH 10-pin,Connector_JST:JST_XH_B10B-XH-A_1x10_P2.50mm_Vertical,,649-B10B-XH-A,B10B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x11,JST XH 11-pin,Connector_JST:JST_XH_B11B-XH-A_1x11_P2.50mm_Vertical,,649-B11B-XH-A,B11B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x12,JST XH 12-pin,Connector_JST:JST_XH_B12B-XH-A_1x12_P2.50mm_Vertical,,649-B12B-XH-A,B12B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x13,JST XH 13-pin,Connector_JST:JST_XH_B13B-XH-A_1x13_P2.50mm_Vertical,,649-B13B-XH-A,B13B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x14,JST XH 14-pin,Connector_JST:JST_XH_B14B-XH-A_1x14_P2.50mm_Vertical,,649-B14B-XH-A,B14B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x15,JST XH 15-pin,Connector_JST:JST_XH_B15B-XH-A_1x15_P2.50mm_Vertical,,649-B15B-XH-A,B15B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x16,JST XH 16-pin,Connector_JST:JST_XH_B16B-XH-A_1x16_P2.50mm_Vertical,,649-B16B-XH-A,B16B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_1x20,JST XH 20-pin,Connector_JST:JST_XH_B20B-XH-A_1x20_P2.50mm_Vertical,,649-B20B-XH-A,B20B-XH-A(LF)(SN)-ND,Vertical header
+J_JST_XH_S1B,JST XH 1-pin Horiz,Connector_JST:JST_XH_S1B-XH-A_1x01_P2.50mm_Horizontal,,649-S1B-XH-A,S1B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S2B,JST XH 2-pin Horiz,Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal,,649-S2B-XH-A,S2B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S3B,JST XH 3-pin Horiz,Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal,,649-S3B-XH-A,S3B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S4B,JST XH 4-pin Horiz,Connector_JST:JST_XH_S4B-XH-A_1x04_P2.50mm_Horizontal,,649-S4B-XH-A,S4B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S5B,JST XH 5-pin Horiz,Connector_JST:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal,,649-S5B-XH-A,S5B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S6B,JST XH 6-pin Horiz,Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal,,649-S6B-XH-A,S6B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S7B,JST XH 7-pin Horiz,Connector_JST:JST_XH_S7B-XH-A_1x07_P2.50mm_Horizontal,,649-S7B-XH-A,S7B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S8B,JST XH 8-pin Horiz,Connector_JST:JST_XH_S8B-XH-A_1x08_P2.50mm_Horizontal,,649-S8B-XH-A,S8B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S9B,JST XH 9-pin Horiz,Connector_JST:JST_XH_S9B-XH-A_1x09_P2.50mm_Horizontal,,649-S9B-XH-A,S9B-XH-A(LF)(SN)-ND,Horizontal connector
+J_JST_XH_S10B,JST XH 10-pin Horiz,Connector_JST:JST_XH_S10B-XH-A-1_1x10_P2.50mm_Horizontal,,649-S10B-XH-A,S10B-XH-A(LF)(SN)-ND,Horizontal connector

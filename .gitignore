@@ -1,0 +1,60 @@
+# KiCAD backup files
+*.bak
+*.backup
+*~
+*.kicad_pcb-bak
+*.sch-bak
+*.kicad_sch-bak
+
+# KiCAD cache and temporary files
+fp-info-cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.Python
+
+# Python
+*.py[cod]
+*$py.class
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Temporary/work files
+*.tmp
+.~*
+/temp/
+/tmp/
+
+# Build outputs (not needed in repo)
+gerber/
+drill/
+fab/
+*.gbr
+*.gbl
+*.gts
+*.gto
+*.xln
+
+# Assembly outputs
+*.csv~
+
+# Local agent/development files
+CLAUDE.md
+.claude/
+
+# Don't ignore actual source files
+!.gitkeep
