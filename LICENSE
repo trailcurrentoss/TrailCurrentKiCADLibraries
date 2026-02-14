@@ -19,32 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-## Hardware Designs
-
-The KiCAD symbol, footprint, and 3D model files are open source hardware designs.
-They are provided under the same MIT License terms as above.
-
-For hardware designs, this means:
-- ✅ You can use these designs for personal or commercial projects
-- ✅ You can modify and improve the designs
-- ✅ You can distribute designs and products based on them
-- ℹ️ Attribution is appreciated (but not required)
-- ℹ️ No warranty or liability
-
----
-
-## Trademark
-
-The "TrailCurrent" name and associated logos remain trademarks of TrailCurrent.
-You may use these designs, but please do not use the TrailCurrent name in a way
-that implies endorsement or affiliation without permission.
-
----
-
-## Contributing
-
-If you contribute improvements to these designs or documentation, you agree that
-your contributions will be licensed under the same MIT License.
