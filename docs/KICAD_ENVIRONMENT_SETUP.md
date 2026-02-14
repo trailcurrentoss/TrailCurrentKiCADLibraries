@@ -294,7 +294,7 @@ Library configurations should use variables:
 
 1. **Clone the KiCAD libraries:**
    ```bash
-   git clone https://codeberg.org/trailcurrentopensource/TrailCurrentKiCADLibraries.git
+   git clone git@github.com:trailcurrentoss/TrailCurrentKiCADLibraries.git
    ```
 
 2. **Set environment variables** to point to YOUR cloned `TrailCurrentKiCADLibraries` location

@@ -63,7 +63,7 @@ TrailCurrentKiCADLibraries/
 ### 1. Clone This Repository
 
 ```bash
-git clone https://codeberg.org/trailcurrentopensource/TrailCurrentKiCADLibraries.git
+git clone git@github.com:trailcurrentoss/TrailCurrentKiCADLibraries.git
 ```
 
 ### 2. Set Environment Variables
@@ -330,10 +330,10 @@ See [LICENSE](LICENSE) in the main TrailCurrent repository.
 
 ## Related Repositories
 
-- [TrailCurrent](https://codeberg.org/trailcurrent) - Main project organization
-- [OtaUpdateLibraryWROOM32](https://codeberg.org/trailcurrentopensource/OtaUpdateLibraryWROOM32) - Firmware library
-- [TwaiTaskBasedLibraryWROOM32](https://codeberg.org/trailcurrentopensource/TwaiTaskBasedLibraryWROOM32) - CAN library
-- [ESP32ArduinoDebugLibrary](https://codeberg.org/trailcurrentopensource/ESP32ArduinoDebugLibrary) - Debug library
+- [TrailCurrent](https://github.com/trailcurrentoss) - Main project organization
+- [OtaUpdateLibraryWROOM32](https://github.com/trailcurrentoss/OtaUpdateLibraryWROOM32) - Firmware library
+- [TwaiTaskBasedLibraryWROOM32](https://github.com/trailcurrentoss/TwaiTaskBasedLibraryWROOM32) - CAN library
+- [ESP32ArduinoDebugLibrary](https://github.com/trailcurrentoss/ESP32ArduinoDebugLibrary) - Debug library
 
 ---
 
