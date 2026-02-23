@@ -1,6 +1,8 @@
 # TrailCurrent KiCAD Libraries
 ## Consolidated Symbol, Footprint, and 3D Model Repository
 
+Part of the [TrailCurrent](https://trailcurrent.com) open-source vehicle platform.
+
 ---
 
 ## Overview
