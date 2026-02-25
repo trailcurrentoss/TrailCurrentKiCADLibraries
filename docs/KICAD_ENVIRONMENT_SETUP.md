@@ -1,323 +1,118 @@
-# KiCAD Environment Variables Setup Guide
-## Configuring TRAILCURRENT Custom Environment Variables
+# KiCAD Environment Setup Guide
+## Installing TrailCurrent Libraries
 
 ---
 
 ## Overview
 
-TrailCurrent projects use three custom environment variables to reference shared libraries:
+TrailCurrent libraries are installed with a single command:
 
-| Variable | Purpose | Path |
-|----------|---------|------|
-| `TRAILCURRENT_SYMBOL_DIR` | Symbol libraries | `.../TrailCurrentKiCADLibraries/symbols` |
-| `TRAILCURRENT_FOOTPRINT_DIR` | Footprint libraries | `.../TrailCurrentKiCADLibraries/footprints` |
-| `TRAILCURRENT_3DMODEL_DIR` | 3D model files | `.../TrailCurrentKiCADLibraries/3d_models` |
+```bash
+./install.sh
+```
 
-These variables allow projects to reference shared libraries without hardcoding absolute paths.
+The script handles everything:
+- Adds `TrailCurrentSymbolLibrary` to your global sym-lib-table
+- Adds `TrailCurrentFootprints` to your global fp-lib-table
+- Sets `TRAILCURRENT_3DMODEL_DIR` in KiCAD's path configuration (`kicad_common.json`)
+- Detects KiCAD snap installs and fixes removable-media permissions if needed
+- Safe to run multiple times (skips existing entries)
+- Works on Linux, macOS, and Windows (Git Bash/MSYS2)
+
+After install, only **two** KiCAD library table entries exist (never needs updating):
+
+| Type | Nickname |
+|------|----------|
+| Symbol | `TrailCurrentSymbolLibrary` |
+| Footprint | `TrailCurrentFootprints` |
 
 ---
 
-## Setup Instructions by Operating System
+## Quick Setup
 
-### 🐧 Linux / macOS
-
-#### Option 1: Shell Configuration (Recommended)
-
-Add to `~/.bashrc`, `~/.zshrc`, or `~/.bash_profile`:
+### Step 1: Clone and Install
 
 ```bash
-# TrailCurrent KiCAD Library Directories
-export TRAILCURRENT_SYMBOL_DIR="/path/to/TrailCurrentKiCADLibraries/symbols"
-export TRAILCURRENT_FOOTPRINT_DIR="/path/to/TrailCurrentKiCADLibraries/footprints"
-export TRAILCURRENT_3DMODEL_DIR="/path/to/TrailCurrentKiCADLibraries/3d_models"
+git clone git@github.com:trailcurrentoss/TrailCurrentKiCADLibraries.git
+cd TrailCurrentKiCADLibraries
+./install.sh
 ```
 
-**Replace `/path/to/` with your actual path, for example:**
+### Step 2: Restart KiCAD and Verify
 
-```bash
-export TRAILCURRENT_SYMBOL_DIR="/path/to/TrailCurrentKiCADLibraries/symbols"
-export TRAILCURRENT_FOOTPRINT_DIR="/path/to/TrailCurrentKiCADLibraries/footprints"
-export TRAILCURRENT_3DMODEL_DIR="/path/to/TrailCurrentKiCADLibraries/3d_models"
-```
+Close all KiCAD windows and reopen. Then verify:
 
-**Or if cloned to home directory:**
-
-```bash
-export TRAILCURRENT_SYMBOL_DIR="$HOME/TrailCurrentKiCADLibraries/symbols"
-export TRAILCURRENT_FOOTPRINT_DIR="$HOME/TrailCurrentKiCADLibraries/footprints"
-export TRAILCURRENT_3DMODEL_DIR="$HOME/TrailCurrentKiCADLibraries/3d_models"
-```
-
-**Then reload:**
-```bash
-source ~/.bashrc  # or ~/.zshrc if using zsh
-```
-
-**Verify:**
-```bash
-echo $TRAILCURRENT_SYMBOL_DIR
-# Should output your actual path, e.g.: /path/to/TrailCurrentKiCADLibraries/symbols
-```
-
-#### Option 2: KiCAD GUI Configuration (No Shell Required)
-
-1. **Open KiCAD**
-2. **Go to:** Preferences → Preferences (or Edit → Preferences)
-3. **Navigate to:** Manage Paths (usually in left sidebar)
-4. **Click:** "Add" button
-5. **Create entries:**
-
-   **First Entry:**
-   - Environment Variable: `TRAILCURRENT_SYMBOL_DIR`
-   - Path: `/path/to/TrailCurrentKiCADLibraries/symbols`
-   - Description: TrailCurrent Symbol Libraries
-
-   **Second Entry:**
-   - Environment Variable: `TRAILCURRENT_FOOTPRINT_DIR`
-   - Path: `/path/to/TrailCurrentKiCADLibraries/footprints`
-   - Description: TrailCurrent Footprint Libraries
-
-   **Third Entry:**
-   - Environment Variable: `TRAILCURRENT_3DMODEL_DIR`
-   - Path: `/path/to/TrailCurrentKiCADLibraries/3d_models`
-   - Description: TrailCurrent 3D Model Libraries
-
-6. **Click:** OK to save
-7. **Restart KiCAD** for changes to take effect
-
----
-
-### 🪟 Windows
-
-#### Option 1: System Environment Variables (Recommended)
-
-1. **Open Settings:**
-   - Press `Win + X`
-   - Select "System"
-
-2. **Navigate to Environment Variables:**
-   - Click "Advanced system settings"
-   - Click "Environment Variables" button at bottom
-
-3. **Create New User Variables:**
-   - Under "User variables for [YourUsername]", click "New"
-
-   **First Variable:**
-   - Variable name: `TRAILCURRENT_SYMBOL_DIR`
-   - Variable value: `C:\Users\Dave\Path\To\TrailCurrentKiCADLibraries\symbols`
-   - Click OK
-
-   **Second Variable:**
-   - Variable name: `TRAILCURRENT_FOOTPRINT_DIR`
-   - Variable value: `C:\Users\Dave\Path\To\TrailCurrentKiCADLibraries\footprints`
-   - Click OK
-
-   **Third Variable:**
-   - Variable name: `TRAILCURRENT_3DMODEL_DIR`
-   - Variable value: `C:\Users\Dave\Path\To\TrailCurrentKiCADLibraries\3d_models`
-   - Click OK
-
-4. **Click OK** to close Environment Variables dialog
-5. **Click OK** to close System Properties
-6. **Restart KiCAD** (close completely and reopen)
-
-#### Option 2: KiCAD GUI Configuration
-
-1. Open KiCAD
-2. Preferences → Manage Paths
-3. Click "Add" and create the three entries (same names and paths as above)
-4. Click OK and restart KiCAD
-
----
-
-### 🍎 macOS (M1/M2/Intel)
-
-**Using Shell (Same as Linux above):**
-
-If using **homebrew cask** KiCAD, add to `~/.zprofile` (macOS default shell is zsh):
-
-```bash
-# TrailCurrent KiCAD Environments
-export TRAILCURRENT_SYMBOL_DIR="$HOME/Documents/TrailCurrent/KiCADLibraries/symbols"
-export TRAILCURRENT_FOOTPRINT_DIR="$HOME/Documents/TrailCurrent/KiCADLibraries/footprints"
-export TRAILCURRENT_3DMODEL_DIR="$HOME/Documents/TrailCurrent/KiCADLibraries/3d_models"
-```
-
-**Then reload:**
-```bash
-source ~/.zprofile
-```
-
-**If using app bundle directly**, use KiCAD GUI method (Preferences → Manage Paths)
+1. **Add Symbol** -> search `AP63203` -> should find AP63203WU-7
+2. **Add Footprint** -> search `MCP2515` -> should find MCP2515T-ISO
+3. **Preferences -> Configure Paths** -> `TRAILCURRENT_3DMODEL_DIR` should appear
 
 ---
 
 ## Verification
 
-### ✅ Test That Variables Are Set
+### Test That KiCAD Recognizes the Libraries
 
-**Linux/macOS:**
-```bash
-# Check all three variables
-echo "SYMBOL_DIR: $TRAILCURRENT_SYMBOL_DIR"
-echo "FOOTPRINT_DIR: $TRAILCURRENT_FOOTPRINT_DIR"
-echo "3DMODEL_DIR: $TRAILCURRENT_3DMODEL_DIR"
+1. Open KiCAD
+2. **Preferences -> Manage Symbol Libraries** -> look for `TrailCurrentSymbolLibrary`
+3. **Preferences -> Manage Footprint Libraries** -> look for `TrailCurrentFootprints`
+4. **Preferences -> Configure Paths** -> look for `TRAILCURRENT_3DMODEL_DIR`
 
-# Should output paths, not blank
-```
+### Test 3D Model Loading
 
-**Windows (Command Prompt):**
-```cmd
-echo %TRAILCURRENT_SYMBOL_DIR%
-echo %TRAILCURRENT_FOOTPRINT_DIR%
-echo %TRAILCURRENT_3DMODEL_DIR%
-```
-
-### ✅ Test That KiCAD Recognizes Variables
-
-1. **Open KiCAD**
-2. **Open a TrailCurrent project** (any `.kicad_pro` file)
-3. **Check:** Preferences → Manage Paths
-4. **Verify:** Your three `TRAILCURRENT_*` variables appear in the list
-5. **Open a schematic:** Schematic Editor
-6. **Check:** Tools → Footprint Properties (if a footprint exists)
-   - Should resolve `${TRAILCURRENT_FOOTPRINT_DIR}` paths correctly
-   - If paths show absolute, you may need to reload the project
-
-### ✅ Test 3D Model Loading
-
-1. **Open PCB Editor** on a TrailCurrent project PCB
-2. **View → 3D Viewer** (or press Alt+3)
-3. **Check:** 3D models should load without errors
-4. If you see errors about missing models:
-   - Models may use old absolute paths
-   - See "Troubleshooting" section below
+1. Open a PCB that uses TrailCurrent footprints
+2. **View -> 3D Viewer** (or Alt+3)
+3. 3D models should load without errors
 
 ---
 
-## Using Environment Variables in Projects
+## Updating Libraries
 
-### In Schematic (`.kicad_sch`)
+When new components are added to the repository:
 
-Symbol references automatically use KiCAD's standard symbol paths. For custom symbols:
-
-```scheme
-(symbol (lib_reference "CUSTOM:/home/dave/lib.kicad_sym:MySymbol")...)
+```bash
+cd TrailCurrentKiCADLibraries
+git pull
 ```
 
-Should be updated to use the consolidated library path.
-
-### In PCB (`.kicad_pcb`)
-
-3D models should reference the environment variable:
-
-**Old (Absolute Path - DON'T USE):**
-```scheme
-(model "/home/dave/3D_Models/connector.step"...)
-```
-
-**New (Environment Variable - USE THIS):**
-```scheme
-(model "${TRAILCURRENT_3DMODEL_DIR}/modules/connector.step"...)
-```
-
-**Or (Relative Path - ALSO OK):**
-```scheme
-(model "${KIPRJMOD}/../../TrailCurrentKiCADLibraries/3d_models/modules/connector.step"...)
-```
-
-### In Project (`.kicad_pro`)
-
-Library configurations should use variables:
-
-```json
-{
-  "pcbnew": {
-    "3dview_settings": {
-      "modeldir": "${TRAILCURRENT_3DMODEL_DIR}"
-    }
-  }
-}
-```
+No reinstall needed. KiCAD reads the library files directly from the repository directory.
 
 ---
 
 ## Troubleshooting
 
-### ❌ "Cannot find environment variable"
-
-**Cause:** Variable not set or KiCAD not restarted
+### "Cannot find environment variable TRAILCURRENT_3DMODEL_DIR"
 
 **Solution:**
-1. Set variable in shell or Windows
-2. **Completely close KiCAD** (all windows)
-3. **Reopen KiCAD**
-4. Check Preferences → Manage Paths to verify variable exists
+1. Open KiCAD -> Preferences -> Configure Paths
+2. Add `TRAILCURRENT_3DMODEL_DIR` pointing to `3dmodels/TrailCurrent.3dshapes/`
+3. Restart KiCAD
 
-### ❌ "3D models show as broken/missing"
-
-**Cause:** Projects may still reference old absolute paths
+### "Footprint 'TrailCurrentFootprints:...' not found"
 
 **Solution:**
-1. In PCB Editor, select a footprint with 3D model
-2. Right-click → Footprint Properties
-3. Check the "3D Models" section
-4. If path shows absolute (e.g., `/home/dave/...`), manually update it
-5. Change to: `${TRAILCURRENT_3DMODEL_DIR}/modules/filename.step`
+1. Run `./install.sh` to register the library
+2. Restart KiCAD completely (close all windows)
 
-### ❌ "Variables work in shell but not in KiCAD"
+### "Variables work in shell but not in KiCAD"
 
-**Cause:** KiCAD launched before shell variables loaded
+**Cause:** KiCAD was launched before shell variables were loaded, or KiCAD doesn't inherit shell environment on your platform.
 
-**Solution:**
-- **Linux/macOS:** Use KiCAD GUI method (Preferences → Manage Paths)
-- **Windows:** Use System Environment Variables (not cmd.exe)
+**Solution:** Use KiCAD's built-in path configuration (Preferences -> Configure Paths) instead of relying on shell variables.
 
-### ❌ "I get ~different~ paths on different computers"
+### "3D models show as missing"
 
-**Cause:** Libraries in different locations on each machine
+**Cause:** `TRAILCURRENT_3DMODEL_DIR` not set or pointing to wrong directory.
 
-**Solution:**
-1. Each developer sets `TRAILCURRENT_*` to THEIR local path
-2. Example:
-   - Developer A: `/path/to/TrailCurrentKiCADLibraries`
-   - Jane: `/home/jane/projects/TrailCurrentKiCADLibraries`
-   - Both set `TRAILCURRENT_SYMBOL_DIR` but to different paths
-3. KiCAD projects use `${TRAILCURRENT_SYMBOL_DIR}`, so they work on both
-4. **This is the whole point** of environment variables!
+**Solution:** Verify the path in Preferences -> Configure Paths points to:
+```
+/path/to/TrailCurrentKiCADLibraries/3dmodels/TrailCurrent.3dshapes
+```
 
----
+Not to the old `3d_models/` directory.
 
-## For Contributors
+### "Different paths on different computers"
 
-### When Using TrailCurrent Projects
-
-1. **Clone the KiCAD libraries:**
-   ```bash
-   git clone git@github.com:trailcurrentoss/TrailCurrentKiCADLibraries.git
-   ```
-
-2. **Set environment variables** to point to YOUR cloned `TrailCurrentKiCADLibraries` location
-   - See setup instructions above
-
-3. **Open projects in KiCAD** - should work!
-
----
-
-## For Maintainers
-
-### When Updating Library Paths
-
-If you move the `TrailCurrentKiCADLibraries` directory:
-
-1. **Update environment variables:**
-   ```bash
-   export TRAILCURRENT_SYMBOL_DIR="/new/path/TrailCurrentKiCADLibraries/symbols"
-   ```
-
-2. **That's it!** All projects automatically use new paths
-
-3. **No need to update individual projects** ✅
+This is expected and correct. Each developer sets their own `TRAILCURRENT_3DMODEL_DIR` path based on where they cloned the repository. KiCAD projects use the variable reference `${TRAILCURRENT_3DMODEL_DIR}`, which resolves differently on each machine.
 
 ---
 
@@ -327,22 +122,9 @@ For reference, KiCAD provides these built-in variables:
 
 | Variable | Purpose |
 |----------|---------|
-| `${KICAD_SYMBOL_DIR}` | Standard KiCAD symbols |
-| `${KICAD_FOOTPRINT_DIR}` | Standard KiCAD footprints |
-| `${KICAD_3DMODEL_DIR}` | Standard 3D models |
-| `${KIPRJMOD}` | Project directory (in project files) |
-| `${KICAD9_SYMBOL_DIR}` | KiCAD 9.x symbols |
-| `${KICAD9_FOOTPRINT_DIR}` | KiCAD 9.x footprints |
+| `${KICAD9_SYMBOL_DIR}` | Standard KiCAD 9.x symbols |
+| `${KICAD9_FOOTPRINT_DIR}` | Standard KiCAD 9.x footprints |
+| `${KICAD9_3DMODEL_DIR}` | Standard KiCAD 9.x 3D models |
+| `${KIPRJMOD}` | Current project directory |
 
-You can use any combination with TrailCurrent variables.
-
----
-
-## Summary
-
-✅ **Environment variables are set** → KiCAD sees them
-✅ **Projects use `${TRAILCURRENT_*}` paths** → Portable everywhere
-✅ **Each developer sets their own paths** → Works for everyone
-✅ **No absolute paths in projects** → Safe for GitHub
-
-You're ready to work with TrailCurrent hardware designs!
+TrailCurrent libraries use the custom `${TRAILCURRENT_3DMODEL_DIR}` variable alongside these standard ones.

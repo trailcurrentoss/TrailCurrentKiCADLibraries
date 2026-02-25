@@ -7,17 +7,47 @@ Part of the [TrailCurrent](https://trailcurrent.com) open-source vehicle platfor
 
 ## Overview
 
-**TrailCurrentKiCADLibraries** is a consolidated repository containing all reusable KiCAD libraries for the TrailCurrent hardware projects:
-
-- 📦 **Symbol Libraries** - Standard KiCAD symbols
-- 📐 **Footprint Libraries** - PCB footprints
-- 🎯 **3D Models** - STEP files for 3D visualization and CAM
+**TrailCurrentKiCADLibraries** is a KiCAD Plugin and Content Manager (PCM) compatible library package containing all reusable symbols, footprints, and 3D models for TrailCurrent hardware projects.
 
 This repository is designed to:
-- ✅ Centralize all hardware design assets
-- ✅ Make projects reproducible for contributors
-- ✅ Remove personal system paths from project files
-- ✅ Enable easy library updates across all projects
+- Install with a single script or via KiCAD's PCM
+- Centralize all hardware design assets
+- Make projects reproducible for contributors
+- Remove personal system paths from project files
+- Enable easy library updates with `git pull`
+
+---
+
+## Quick Start
+
+### 1. Clone and Install
+
+```bash
+git clone git@github.com:trailcurrentoss/TrailCurrentKiCADLibraries.git
+cd TrailCurrentKiCADLibraries
+./install.sh
+```
+
+The install script automatically:
+- Registers the symbol library in KiCAD's global sym-lib-table
+- Registers the footprint library in KiCAD's global fp-lib-table
+- Sets `TRAILCURRENT_3DMODEL_DIR` in KiCAD's path configuration
+- Detects snap installs and fixes removable-media permissions if needed
+
+### 2. Restart KiCAD and Verify
+
+1. Restart KiCAD (close all windows, reopen)
+2. Add Symbol -> search `AP63203` -> should find AP63203WU-7
+3. Add Footprint -> search `MCP2515` -> should find MCP2515T-ISO
+
+### Updating
+
+```bash
+cd TrailCurrentKiCADLibraries
+git pull
+```
+
+No reinstall needed — KiCAD picks up changes automatically.
 
 ---
 
@@ -25,155 +55,125 @@ This repository is designed to:
 
 ```
 TrailCurrentKiCADLibraries/
-│
-├── symbols/                          # Symbol libraries
-│   ├── core/                        # Core components (R, L, C, etc.)
-│   ├── connectors/                  # Connector symbols
-│   ├── power/                       # Power distribution symbols
-│   └── modules/                     # Module symbols (MCUs, etc.)
-│
-├── footprints/                      # Footprint libraries
-│   ├── connectors/                  # Connector footprints
-│   ├── passives/                    # Passive component footprints
-│   ├── semiconductors/              # IC footprints
-│   └── modules/                     # Custom module footprints
-│
-├── 3d_models/                       # 3D model files
-│   ├── connectors/                  # Connector 3D models
-│   ├── enclosures/                  # Enclosure models
-│   └── modules/                     # Component 3D models
-│
-├── README.md                        # This file
-├── docs/                            # Core documentation
-│   ├── KICAD_CHECKLIST.md          # Security & best practices
-│   ├── KICAD_ENVIRONMENT_SETUP.md  # Environment setup instructions
-│   └── SECURITY.md                 # Pre-commit hook security system
-│
-├── tools/                           # Optional workflow utilities
-│   ├── README.md                   # Tools documentation
-│   ├── add_supplier_fields.py      # Automation script (optional)
-│   ├── jst_xh_connector_parts.csv  # Parts database (optional)
-│   ├── SUPPLIER_PART_NUMBERS.md    # Supplier integration guide
-│   ├── BOM_ASSEMBLY_WORKFLOW.md    # Assembly and BOM workflow
-│   └── SUPPLIER_PARTS_README.md    # Supplier parts system overview
+├── metadata.json                              # PCM package metadata
+├── install.sh                                 # Library installer script
+├── symbols/
+│   └── TrailCurrentSymbolLibrary.kicad_sym    # All custom symbols (1 file)
+├── footprints/
+│   └── TrailCurrentFootprints.pretty/         # All custom footprints (1 library)
+│       ├── AP63203WU7.kicad_mod
+│       ├── MCP2515T-ISO.kicad_mod
+│       ├── SN65HVD230DR.kicad_mod
+│       ├── HCM4912000000ABJT.kicad_mod
+│       ├── INDM3225X240N.kicad_mod
+│       ├── CAN_PLUS_POWER.kicad_mod
+│       ├── JST_XH_B*_Vertical.kicad_mod      # JST XH vertical series
+│       ├── JST_XH_S*_Horizontal.kicad_mod    # JST XH horizontal series
+│       └── ...                                # 54 footprints total
+├── 3dmodels/
+│   └── TrailCurrent.3dshapes/                 # 3D models (categorized)
+│       ├── connectors/                        # JST XH STEP+WRL, screw terminal
+│       ├── ics/                               # SN65HVD230DR, MCP2515, IRF4905
+│       ├── modules/                           # Enclosures, MCU modules, sensors
+│       ├── passives/                          # Crystal, inductor
+│       └── power/                             # AP63203WU-7
+├── docs/
+│   ├── ADDING_LIBRARIES.md                    # Guide to adding components
+│   ├── KICAD_CHECKLIST.md                     # Security best practices
+│   ├── KICAD_ENVIRONMENT_SETUP.md             # Environment setup details
+│   └── SECURITY.md                            # Pre-commit hook system
+├── tools/                                     # Optional workflow utilities
+│   ├── README.md
+│   ├── add_supplier_fields.py
+│   ├── jst_xh_connector_parts.csv
+│   ├── SUPPLIER_PART_NUMBERS.md
+│   ├── BOM_ASSEMBLY_WORKFLOW.md
+│   └── SUPPLIER_PARTS_README.md
+├── resources/                                 # PCM package resources
+└── LICENSE
 ```
 
 ---
 
-## Quick Start
+## KiCAD Library Table Entries
 
-### 1. Clone This Repository
+After running `install.sh`, only **two** global library entries are needed (the script adds these automatically):
 
-```bash
-git clone git@github.com:trailcurrentoss/TrailCurrentKiCADLibraries.git
-```
+| Type | Nickname | Path |
+|------|----------|------|
+| Symbol | `TrailCurrentSymbolLibrary` | `<repo>/symbols/TrailCurrentSymbolLibrary.kicad_sym` |
+| Footprint | `TrailCurrentFootprints` | `<repo>/footprints/TrailCurrentFootprints.pretty` |
 
-### 2. Set Environment Variables
-
-**Linux/macOS:**
-```bash
-export TRAILCURRENT_SYMBOL_DIR="/path/to/TrailCurrentKiCADLibraries/symbols"
-export TRAILCURRENT_FOOTPRINT_DIR="/path/to/TrailCurrentKiCADLibraries/footprints"
-export TRAILCURRENT_3DMODEL_DIR="/path/to/TrailCurrentKiCADLibraries/3d_models"
-```
-
-**Windows:**
-```cmd
-set TRAILCURRENT_SYMBOL_DIR=C:\Path\To\TrailCurrentKiCADLibraries\symbols
-set TRAILCURRENT_FOOTPRINT_DIR=C:\Path\To\TrailCurrentKiCADLibraries\footprints
-set TRAILCURRENT_3DMODEL_DIR=C:\Path\To\TrailCurrentKiCADLibraries\3d_models
-```
-
-**KiCAD GUI:**
-- Preferences → Manage Paths
-- Add three new entries with the paths above
-
-See [KICAD_ENVIRONMENT_SETUP.md](docs/KICAD_ENVIRONMENT_SETUP.md) for detailed instructions.
-
-### 3. Open a TrailCurrent Project
-
-```bash
-kicad /path/to/TrailCurrentGpsModule/EDA/trailcurrent-gps-module/trailcurrent-gps-module.kicad_pro
-```
-
-All libraries should automatically resolve!
+New symbols and footprints are added to these existing libraries — no additional table entries needed.
 
 ---
 
 ## Contents Inventory
 
+### Symbol Library
+
+`symbols/TrailCurrentSymbolLibrary.kicad_sym` contains all custom symbols:
+
+| Symbol | Description | Footprint |
+|--------|-------------|-----------|
+| AP63203WU-7 | 3.8-32V DC-DC buck converter (Diodes Inc) | TrailCurrentFootprints:AP63203WU7 |
+| HCM4912000000ABJT | 12MHz crystal oscillator HC49S SMD (Citizen) | TrailCurrentFootprints:HCM4912000000ABJT |
+| MCP2515T-I_SO | Stand-alone CAN controller with SPI (Microchip) | TrailCurrentFootprints:MCP2515T-ISO |
+| SN65HVD230DR | 3.3V CAN transceiver (Texas Instruments) | TrailCurrentFootprints:SN65HVD230DR |
+
+### Footprint Library
+
+`footprints/TrailCurrentFootprints.pretty/` contains 54 footprints:
+
+| Component | Footprint(s) |
+|-----------|-------------|
+| JST XH Connectors | 46 footprints: 1-20 pin, vertical and horizontal variants |
+| CAN Bus Controller | MCP2515T-ISO (18-SOIC) |
+| CAN Transceiver | SN65HVD230DR (8-SOIC) |
+| DC-DC Converter | AP63203WU7 (TSOT26) |
+| Crystal Oscillator | HCM4912000000ABJT (HC49S SMD) |
+| Inductor | INDM3225X240N (3225 SMD) |
+| CAN+Power Connector | CAN_PLUS_POWER (4-pad custom) |
+| SMD JST XH | JST_S4B-XH-SM4-TB, JST_XH_S3B/S4B-SM4-TB |
+
 ### 3D Models
 
-Consolidated STEP files from all TrailCurrent hardware modules:
+105 model files (STEP, STP, WRL) in `3dmodels/TrailCurrent.3dshapes/`:
 
-```
-3d_models/modules/
-├── Pi5CanAndBuckHat.step              (9.6M) - Raspberry Pi CAN adapter
-├── TrailCurrentAirQualityModule.step  (4.7M) - Air quality sensor enclosure
-├── TrailCurrentTempAndHumiditySensor.step (53K) - Temperature/humidity module
-└── trailer-shunt-can-bus.step         (3.8M) - CAN shunt gateway enclosure
-```
-
-**Total:** 9.6 MB of 3D models
-
-### Symbols & Footprints
-
-- **Symbol Libraries:** Using standard KiCAD libraries (no custom symbols)
-- **Footprint Libraries:** Using standard KiCAD libraries (no custom footprints)
-- Future custom components will be added here as needed
+| Directory | Contents |
+|-----------|----------|
+| `connectors/` | JST XH series (STEP + WRL pairs), 4-pin screw terminal |
+| `ics/` | SN65HVD230DR, MCP2515T-I_SO, IRF4905STRLPBF |
+| `modules/` | Pi5CanAndBuckHat, AirQualityModule, DHT22, ESP32-C6 Super Mini, AmazonBuckConverters, Automotive Fuse, trailer-shunt-can-bus |
+| `passives/` | HCM4912000000ABJT (crystal), NLV32T-3R9J-EF (inductor) |
+| `power/` | AP63203WU-7 |
 
 ---
 
-## Usage in Projects
+## Alternative Install: KiCAD PCM (Install from File)
 
-### Referencing 3D Models
+This repository is structured as a KiCAD PCM package. To install via PCM:
 
-In PCB files (`.kicad_pcb`), reference models using the environment variable:
+1. Download or clone this repository
+2. Zip the repository contents (with `metadata.json` at the root)
+3. In KiCAD: **Plugin and Content Manager -> Install from File**
+4. Select the zip file
 
-```scheme
-(model "${TRAILCURRENT_3DMODEL_DIR}/modules/connector.step"
-  (at (xyz 0 0 0))
-)
-```
-
-### Adding New 3D Models
-
-1. Place `.step` file in appropriate subfolder:
-   - `connectors/` - Connector 3D models
-   - `enclosures/` - Enclosure and case models
-   - `modules/` - Component and subassembly models
-
-2. Reference in PCB files:
-   ```scheme
-   (model "${TRAILCURRENT_3DMODEL_DIR}/[category]/[filename].step")
-   ```
-
-3. Commit to git and push to GitHub
+KiCAD will automatically register the symbol library, footprint library, and 3D model paths.
 
 ---
 
 ## Contributing
 
-### Adding Custom Symbols
+See [ADDING_LIBRARIES.md](docs/ADDING_LIBRARIES.md) for detailed step-by-step instructions on adding symbols, footprints, and 3D models.
 
-1. Create `.kicad_sym` file in `symbols/[category]/`
-2. Design symbol in KiCAD
-3. Update `.gitignore` if needed
-4. Commit and push to GitHub
+Quick summary:
 
-### Adding Custom Footprints
-
-1. Create `.pretty` directory in `footprints/[category]/`
-2. Design footprint in KiCAD PCB Editor
-3. Commit `.kicad_mod` files
-4. Push to GitHub
-
-### Adding 3D Models
-
-1. Export STEP file from CAD software (FreeCAD, Fusion 360, etc.)
-2. Place in `3d_models/[category]/`
-3. Reference in PCB files with `${TRAILCURRENT_3DMODEL_DIR}` variable
-4. Commit and push
+- **Symbols:** Import into `TrailCurrentSymbolLibrary.kicad_sym` via the Symbol Editor
+- **Footprints:** Save `.kicad_mod` files into `footprints/TrailCurrentFootprints.pretty/`
+- **3D Models:** Place `.step` files in `3dmodels/TrailCurrent.3dshapes/[category]/`
+- **Always** use `${TRAILCURRENT_3DMODEL_DIR}` for 3D model paths — never absolute paths
+- **Always** run the pre-commit hook check before committing
 
 ---
 
@@ -181,10 +181,7 @@ In PCB files (`.kicad_pcb`), reference models using the environment variable:
 
 ### No Personal Paths
 
-✅ This repository contains **no absolute file paths**
-✅ All references use environment variables
-✅ Safe to share with contributors worldwide
-✅ No personal information in files
+This repository contains **no absolute file paths**. All references use environment variables. Safe to share with contributors worldwide.
 
 ### Automated Security Checks
 
@@ -200,133 +197,28 @@ To enable the hook:
 
 See [SECURITY.md](docs/SECURITY.md) for details and [KICAD_CHECKLIST.md](docs/KICAD_CHECKLIST.md) for security best practices.
 
-### Automatic Verification on Commit
-
-The pre-commit hook automatically checks all staged files before committing. No manual verification steps needed!
-
-The hook catches:
-- Personal file paths in any staged file
-- Credentials or secrets
-- Local development files
-
-**Note:** If you need to manually verify (e.g., before the hook is installed):
-
-```bash
-# Check for personal paths in KiCAD files
-grep -r "/home/\|/Users/\|C:\\\\" . --include="*.kicad_*" \
-  && echo "Found personal paths - fix before committing!" || echo "No personal paths found"
-
-# Check for personal names in KiCAD files
-grep -ri "dave\|floyd\|@" . --include="*.kicad_*" | grep -v "@board" \
-  && echo "Review matches above" || echo "No personal references found"
-```
-
-For more information, see [SECURITY.md](docs/SECURITY.md).
-
----
-
-## Library Dependencies
-
-### Standard KiCAD Libraries
-
-All TrailCurrent projects use standard KiCAD libraries:
-
-- `4xxx.kicad_sym` - Logic chips
-- `Amplifier_Operational.kicad_sym` - Op-amps
-- `Connector.kicad_sym` - Connectors
-- `Device.kicad_sym` - Basic components
-- `Interface_CAN_LIN.kicad_sym` - CAN interface
-- `MCU_Espressif.kicad_sym` - ESP32 microcontrollers
-- `Resistor_SMD.kicad_sym` - Surface mount resistors
-- `Capacitor_SMD.kicad_sym` - Surface mount capacitors
-- ...and many more standard libraries
-
-These are automatically included with KiCAD installation.
-
-### TrailCurrent Custom Libraries
-
-- `symbols/core/` - Custom symbols (when needed)
-- `symbols/connectors/` - Custom connector symbols
-- `symbols/power/` - Custom power circuit symbols
-- `footprints/*/` - Custom component footprints
-- `3d_models/*/` - Custom 3D models
-
 ---
 
 ## Troubleshooting
 
-### "Cannot find environment variable TRAILCURRENT_*"
+### "Cannot find environment variable TRAILCURRENT_3DMODEL_DIR"
 
-**Solution:** See [KICAD_ENVIRONMENT_SETUP.md](docs/KICAD_ENVIRONMENT_SETUP.md)
+**Solution:** Add the path variable in KiCAD:
+- Preferences -> Configure Paths -> Add:
+  - Name: `TRAILCURRENT_3DMODEL_DIR`
+  - Path: `/path/to/TrailCurrentKiCADLibraries/3dmodels/TrailCurrent.3dshapes`
+- Restart KiCAD
 
-- Set environment variables in shell or KiCAD GUI
-- Restart KiCAD completely
-- Check Preferences → Manage Paths
+### "Footprint 'TrailCurrentFootprints:...' not found"
+
+**Solution:** Run `./install.sh` to register the library, then restart KiCAD.
 
 ### "3D models not loading in projects"
 
 **Solution:**
-1. Open project in KiCAD
-2. For each footprint:
-   - Right-click → Footprint Properties
-   - Check 3D Models tab
-   - Verify path uses `${TRAILCURRENT_3DMODEL_DIR}`
-3. Save project
-
----
-
-## For Maintainers
-
-### Adding New 3D Models
-
-```bash
-# Copy STEP file to appropriate category
-cp /path/to/new_model.step 3d_models/modules/
-
-# Verify it can be referenced
-grep -r "new_model" . --include="*.kicad_pcb"
-
-# Commit
-git add 3d_models/modules/new_model.step
-git commit -m "Add 3D model: new_model for [component]"
-git push
-```
-
-### Updating Library Paths
-
-If moving library location:
-
-1. **Update environment variables** on all developer machines
-2. **No project updates needed** - they use variables!
-3. **That's it!** All projects automatically resolve to new location
-
-### Validating Library Integrity
-
-```bash
-#!/bin/bash
-# Check all 3D models can be referenced
-
-for model in 3d_models/**/*.step; do
-  basename=$(basename "$model")
-  echo "Checking $basename..."
-
-  # Verify file size is reasonable
-  size=$(stat -f%z "$model" 2>/dev/null || stat -c%s "$model")
-  if [ "$size" -lt 1000 ]; then
-    echo "  ⚠️  Very small file size: $size bytes"
-  fi
-done
-
-echo "✅ Library validation complete"
-```
-
----
-
-## License
-
-TrailCurrent hardware designs use the appropriate open source hardware license.
-
-See [LICENSE](LICENSE) in the main TrailCurrent repository.
+1. Check that `TRAILCURRENT_3DMODEL_DIR` is set in Preferences -> Configure Paths
+2. Verify the path points to `3dmodels/TrailCurrent.3dshapes/`
+3. Restart KiCAD
 
 ---
 
@@ -341,6 +233,7 @@ See [LICENSE](LICENSE) in the main TrailCurrent repository.
 
 ## Documentation
 
+- [ADDING_LIBRARIES.md](docs/ADDING_LIBRARIES.md) - Adding symbols, footprints, and 3D models
 - [KICAD_CHECKLIST.md](docs/KICAD_CHECKLIST.md) - Security best practices
 - [KICAD_ENVIRONMENT_SETUP.md](docs/KICAD_ENVIRONMENT_SETUP.md) - Environment setup instructions
 - [SECURITY.md](docs/SECURITY.md) - Pre-commit hook security system
@@ -361,8 +254,14 @@ See [tools/README.md](tools/README.md) for details.
 
 ---
 
+## License
+
+TrailCurrent hardware designs use the CERN Open Hardware License v2 - Permissive.
+
+See [LICENSE](LICENSE) for details.
+
+---
+
 ## Questions?
 
 See the documentation files above or open an issue on GitHub.
-
-Happy designing! 🎯
