@@ -56,7 +56,10 @@ check_credentials() {
         return
     fi
 
-    # Skip known safe files
+    # Skip the hook itself and known safe files
+    if [[ "$file" == *".githooks/"* || "$file" == *"setup-hooks"* ]]; then
+        return
+    fi
     if [[ "$file" == *".md" ]] && [[ "$file" == *"docs/"* ]]; then
         return
     fi
