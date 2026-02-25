@@ -1,0 +1,300 @@
+(footprint "AmazonBuckConverter"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "U**"
+		(at -0.17 -11.2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "84cc2635-7728-4137-904e-930d5fcf72db")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "AmazonBuckConverter"
+		(at 17.04 -23.08 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "dec407af-c171-4b25-ba92-da84d5e1967a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f3a70cbf-ac82-4e3d-9981-80a790533930")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Generic Amazon DC-DC Buck Converter Module"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f8dfd9f9-5ead-47c4-a453-6d396a6c88b7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -1.919 -21.175)
+		(end 28.081 -3.175)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "35a39f09-bbaa-487d-a766-91aca9ffc045")
+	)
+	(fp_text user "OUT+"
+		(at 20.574 -15.875 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "099a8394-cdd4-47de-81bb-13028636c08f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "OUT-"
+		(at 20.447 -6.985 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2a86b4aa-fda1-4101-a5f1-fa33114a2c38")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "IN-"
+		(at 1.524 -4.572 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "3464de9c-e95f-40e1-a4d8-e9037e6ae864")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "IN+"
+		(at 1.778 -16.002 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "3cc051b9-4755-4f91-bc6b-f8c601483be7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "OUT-"
+		(at 20.574 -4.445 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "3e0b634b-944e-442f-8e53-1bfb2d7b4b42")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "IN+"
+		(at 1.778 -18.542 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4c2990b8-4b70-49b2-8acc-8f5f631cfd69")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "OUT+"
+		(at 20.574 -18.542 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "7f523925-a595-4209-9e65-6ea302805b3a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "IN-"
+		(at 1.524 -7.239 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "90259073-a1bf-44fa-8fc6-b5a152012eba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.31 -11.27 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "518ba2e0-3953-4fcf-b0dd-20d0164e4431")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd oval
+		(at -2.54 -19.08 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "650c372a-713b-49fb-a1bd-ada41b34ef42")
+	)
+	(pad "1" smd oval
+		(at -2.54 -16.54 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2f03d7ab-b939-4f5d-8b80-40c2d4a077db")
+	)
+	(pad "1" smd circle
+		(at 0 -19.08 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "8576d81f-2b05-42df-8080-8779c56734e9")
+	)
+	(pad "1" smd circle
+		(at 0 -16.54 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "c42ed868-4269-435b-bf30-11ab3f1a852d")
+	)
+	(pad "2" smd oval
+		(at -2.54 -7.62 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0dfa4765-d70f-43e8-96e2-074b0af5e481")
+	)
+	(pad "2" smd oval
+		(at -2.54 -5.08 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "424fc44b-c6db-4f4d-a60e-3c7f9b8fa16d")
+	)
+	(pad "2" smd circle
+		(at 0 -7.62 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "9e469b88-0500-4233-89ce-9951f0cbea3e")
+	)
+	(pad "2" smd circle
+		(at 0 -5.08 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "bccc8350-6d3f-4465-8963-f808525b1dbe")
+	)
+	(pad "3" smd circle
+		(at 26 -7.62 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "1c1ff011-27e1-4418-b4a6-6e96d4588ecb")
+	)
+	(pad "3" smd circle
+		(at 26 -5.08 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "53eb58bf-253f-4a78-a866-2e5be05357a0")
+	)
+	(pad "3" smd oval
+		(at 28.54 -7.62 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4f8e11f4-3202-472d-87b1-8af0afbaee0c")
+	)
+	(pad "3" smd oval
+		(at 28.54 -5.08 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "df5c7412-d426-4338-b644-8737fe6ea401")
+	)
+	(pad "4" smd circle
+		(at 26 -19.08 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "dbd43abc-759b-4d87-ae51-a167ac710aa7")
+	)
+	(pad "4" smd circle
+		(at 26 -16.54 90)
+		(size 2 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "cf4029d7-f7b8-45de-85da-c163fa9dc59b")
+	)
+	(pad "4" smd oval
+		(at 28.54 -19.08 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b2686350-5ee9-4b3b-9bce-e13d5851b95a")
+	)
+	(pad "4" smd oval
+		(at 28.54 -16.54 90)
+		(size 2 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8a18499c-2dbd-450f-841d-b274cfb87ce1")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Module.3dshapes/AmazonBuckConverters.step"
+		(offset
+			(xyz 13 12 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
+)
