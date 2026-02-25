@@ -81,6 +81,15 @@
 					(hide yes)
 				)
 			)
+			(property "LCSC Part" "C780769"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 			(property "Manufacturer_Name" "Diodes Incorporated"
 				(at 21.59 -694.92 0)
 				(effects
@@ -329,6 +338,12 @@
 	    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN65HVD230DR?qs=QViXGNcIEAtifeQR3pYVUQ%3D%3D" (at 24.13 -594.92 0)
 	      (effects (font (size 1.27 1.27)) (justify left top) hide)
 	    )
+	    (property "LCSC Part" "C12084" (at 0 0 0)
+	      (effects (font (size 1.27 1.27)) hide)
+	    )
+	    (property "DigiKey Part Number" "296-11654-1-ND" (at 0 0 0)
+	      (effects (font (size 1.27 1.27)) hide)
+	    )
 	    (property "Manufacturer_Name" "Texas Instruments" (at 24.13 -694.92 0)
 	      (effects (font (size 1.27 1.27)) (justify left top) hide)
 	    )
@@ -413,6 +428,12 @@
 	      (id 5)
 	      (at 0 -34.29 0)
 	      (effects (font (size 1.27 1.27) ) hide)
+	    )
+	    (property "Mouser Part Number" "579-MCP2515T-I/SO" (at 0 0 0)
+	      (effects (font (size 1.27 1.27)) hide)
+	    )
+	    (property "DigiKey Part Number" "MCP2515T-I/SOCT-ND" (at 0 0 0)
+	      (effects (font (size 1.27 1.27)) hide)
 	    )
 	    (symbol "MCP2515T-I_SO_0_1"
 	      (rectangle
@@ -593,6 +614,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey Part Number" "455-2262-1-ND"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(property "MANUFACTURER" "JST"
 			(at 0 0 0)
 			(effects
@@ -734,6 +764,182 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "NLV32T-3R9J-EF"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "L"
+			(at 1.27 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NLV32T-3R9J-EF"
+			(at 1.27 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:NLV32T-3R9J-EF"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/inductor/inductor/smd/catalog/inductor_commercial_standard_nlv32-ef_en.pdf?ref_disty=mouser"
+			(at 0 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "3.9uH SMD Inductor, NLV32T series, TDK"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "TDK"
+			(at 0 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "NLV32T-3R9J-EF"
+			(at 0 -12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "810-NLV32T3R9JEF"
+			(at 0 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "NLV32T-3R9J-EF_0_1"
+			(arc
+				(start 0 -2.54)
+				(mid 0.6323 -1.905)
+				(end 0 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.27)
+				(mid 0.6323 -0.635)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.6323 0.635)
+				(end 0 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.27)
+				(mid 0.6323 1.905)
+				(end 0 2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "S6B-XH-SM4-TB"
 		(pin_names
 			(offset 1.016)
@@ -788,6 +994,15 @@
 			)
 		)
 		(property "LCSC Part" "C191914"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey Part Number" "455-2264-1-ND"
 			(at 0 0 0)
 			(effects
 				(font

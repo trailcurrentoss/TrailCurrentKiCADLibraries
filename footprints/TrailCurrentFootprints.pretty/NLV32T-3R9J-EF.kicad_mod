@@ -1,0 +1,144 @@
+(footprint "NLV32T-3R9J-EF"
+  (version 20241229)
+  (generator "kicad_mod_editor")
+  (generator_version "9.0")
+  (layer "F.Cu")
+  (descr "TDK NLV32T-3R9J-EF 3.9uH Inductor, 3225 package")
+  (tags "Inductor SMD 3225 3.9uH TDK NLV32T")
+  (attr smd)
+  (fp_text reference "L**"
+    (at 0 -2.5)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 1.27 1.27)
+        (thickness 0.254)
+      )
+    )
+  )
+  (fp_text value "NLV32T-3R9J-EF"
+    (at 0 2.5)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 1.27 1.27)
+        (thickness 0.254)
+      )
+    )
+  )
+  (fp_text user "${REFERENCE}"
+    (at 0 0)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 1.27 1.27)
+        (thickness 0.254)
+      )
+    )
+  )
+  (fp_line
+    (start -2.45 -1.6)
+    (end 2.45 -1.6)
+    (stroke
+      (width 0.05)
+      (type solid)
+    )
+    (layer "F.CrtYd")
+  )
+  (fp_line
+    (start 2.45 -1.6)
+    (end 2.45 1.6)
+    (stroke
+      (width 0.05)
+      (type solid)
+    )
+    (layer "F.CrtYd")
+  )
+  (fp_line
+    (start 2.45 1.6)
+    (end -2.45 1.6)
+    (stroke
+      (width 0.05)
+      (type solid)
+    )
+    (layer "F.CrtYd")
+  )
+  (fp_line
+    (start -2.45 1.6)
+    (end -2.45 -1.6)
+    (stroke
+      (width 0.05)
+      (type solid)
+    )
+    (layer "F.CrtYd")
+  )
+  (fp_line
+    (start -1.6 -1.25)
+    (end 1.6 -1.25)
+    (stroke
+      (width 0.1)
+      (type solid)
+    )
+    (layer "F.Fab")
+  )
+  (fp_line
+    (start 1.6 -1.25)
+    (end 1.6 1.25)
+    (stroke
+      (width 0.1)
+      (type solid)
+    )
+    (layer "F.Fab")
+  )
+  (fp_line
+    (start 1.6 1.25)
+    (end -1.6 1.25)
+    (stroke
+      (width 0.1)
+      (type solid)
+    )
+    (layer "F.Fab")
+  )
+  (fp_line
+    (start -1.6 1.25)
+    (end -1.6 -1.25)
+    (stroke
+      (width 0.1)
+      (type solid)
+    )
+    (layer "F.Fab")
+  )
+  (fp_line
+    (start 1.6 -1.25)
+    (end -1.6 -1.25)
+    (stroke
+      (width 0.2)
+      (type solid)
+    )
+    (layer "F.SilkS")
+  )
+  (fp_line
+    (start -1.6 1.25)
+    (end 1.6 1.25)
+    (stroke
+      (width 0.2)
+      (type solid)
+    )
+    (layer "F.SilkS")
+  )
+  (pad "1" smd rect
+    (at -1.5 0)
+    (size 1.4 1.95)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+  )
+  (pad "2" smd rect
+    (at 1.5 0)
+    (size 1.4 1.95)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+  )
+  (model "${TRAILCURRENT_3DMODEL_DIR}/passives/NLV32T-3R9J-EF.stp"
+    (at (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
+)
