@@ -101,8 +101,9 @@ Imported symbols often have the footprint field pre-filled with a path from the 
 
 ### Step 4: Check for Personal Paths
 
+Run the pre-commit hook check to verify no absolute paths are present:
 ```bash
-grep -n "/home/\|/Users/\|/media/" symbols/*.kicad_sym
+./setup-hooks.sh && git diff --cached
 ```
 
 ---
@@ -160,9 +161,8 @@ Run **Inspect -> Design Rules Check** to catch pad spacing, missing courtyard, o
 
 ### Step 5: Verify No Personal Paths
 
-```bash
-grep -rn "/home/\|/Users/\|/media/" footprints/TrailCurrentFootprints.pretty/*.kicad_mod
-```
+The pre-commit hook will automatically catch any absolute paths when you commit.
+Alternatively, check manually by searching for absolute paths in footprint files.
 
 The 3D model path inside the `.kicad_mod` file should look like:
 

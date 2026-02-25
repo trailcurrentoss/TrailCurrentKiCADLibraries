@@ -24,9 +24,14 @@ check_personal_paths() {
         return
     fi
 
+    # Skip the hook script itself (it contains the patterns as search strings)
+    if [[ "$file" == *".githooks/"* || "$file" == *"setup-hooks"* ]]; then
+        return
+    fi
+
     # Patterns to detect personal paths
     local patterns=(
-        '/media/dave'
+        '/media/[a-z]'
         '/home/[a-z]'
         '/Users/'
         'C:\\Users\\'
@@ -111,7 +116,7 @@ else
     echo "Violations found in staged files."
     echo ""
     echo "Please review the errors above and remove:"
-    echo "  - Personal file paths (/media/dave, /home/user, etc.)"
+    echo "  - Personal file paths (absolute paths to user directories)"
     echo "  - Credentials and secrets"
     echo "  - Personal information"
     echo ""

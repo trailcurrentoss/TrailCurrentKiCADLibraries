@@ -186,7 +186,7 @@ This repository contains **no absolute file paths**. All references use environm
 ### Automated Security Checks
 
 A pre-commit hook automatically prevents commits containing:
-- Personal file paths (/media/dave, /home/user, etc.)
+- Personal file paths (absolute paths to user home or mount directories)
 - Credentials or secrets (passwords, API keys, tokens)
 - Local development files (CLAUDE.md, .claude/)
 

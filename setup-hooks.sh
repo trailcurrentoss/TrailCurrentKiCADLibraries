@@ -32,7 +32,7 @@ if [ -f "$HOOK_TARGET" ] && [ -x "$HOOK_TARGET" ]; then
     echo "  Location: $HOOK_TARGET"
     echo ""
     echo "The hook will now automatically check for:"
-    echo "  - Personal file paths (/media/dave, /home/user, etc.)"
+    echo "  - Personal file paths (absolute paths to user directories)"
     echo "  - Credentials and secrets"
     echo "  - Local development files (CLAUDE.md, .claude/)"
     echo ""

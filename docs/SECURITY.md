@@ -6,7 +6,7 @@ This repository includes automated security checks to prevent accidental commits
 
 The pre-commit hook automatically scans staged files for:
 
-- **Personal file paths** - `/media/dave`, `/home/username`, `/Users/`, `C:\Users\`, etc.
+- **Personal file paths** - Absolute paths to user home or mount directories
 - **Credentials and secrets** - Passwords, API keys, tokens, private keys
 - **Local development files** - `CLAUDE.md`, `.claude/` folder
 - **Suspicious patterns** - Keywords like `password=`, `secret=`, `token=`, AWS keys, etc.
@@ -38,7 +38,7 @@ Example:
 ```bash
 # Hook blocked commit due to hardcoded path
 git diff --cached  # See what's staged
-# Edit the file to remove /media/dave/... references
+# Edit the file to remove the hardcoded path references
 git add path/to/file
 git commit -m "Fix hardcoded paths"
 ```
@@ -60,24 +60,12 @@ git reset HEAD path/to/file
 
 Never commit files containing:
 
-- `/media/dave/` or other user paths
-- `/home/username/` or user home directories
-- `/Users/` (macOS)
-- `C:\Users\` (Windows)
+- Absolute paths to user home or mount directories
+- User-specific directory references
 - API keys or tokens
 - Passwords or credentials
 - Private SSH keys
 - Secrets files
-
-## Legitimate Examples in Documentation
-
-Some documentation files (in `docs/`) contain examples of what NOT to do, like:
-
-```bash
-(model "/home/dave/3D_Models/connector.step")  ← DANGER
-```
-
-These are marked with `BAD`, `DANGER`, or `example` labels and are allowed for educational purposes.
 
 ## If You Need to Bypass (Not Recommended)
 
@@ -99,13 +87,7 @@ To modify what the hook checks:
 
 ## Testing the Hook
 
-Test the hook with a file containing a path:
-
-```bash
-echo "/media/dave/test" > test.txt
-git add test.txt
-git commit -m "Test"  # Should fail
-```
+Test the hook by staging a file containing an absolute user path, then attempting a commit. The hook should block it with a clear error message.
 
 ## Disabling the Hook Temporarily
 
@@ -139,4 +121,3 @@ If the hook is too strict or blocks legitimate commits:
 
 - [KICAD_CHECKLIST.md](KICAD_CHECKLIST.md) - Security best practices
 - [../.gitignore](../.gitignore) - Files excluded from git
-- [../CLAUDE.md](../CLAUDE.md) - Agent guidelines (local only)
