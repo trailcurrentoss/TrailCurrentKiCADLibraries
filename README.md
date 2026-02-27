@@ -73,14 +73,16 @@ TrailCurrentKiCADLibraries/
 │       ├── ESP32-C6-SuperMini_TH.kicad_mod   # ESP32-C6 SuperMini (through-hole)
 │       ├── ESP32-C6-SuperMini_SMD.kicad_mod   # ESP32-C6 SuperMini (SMD)
 │       ├── Mini560.kicad_mod                  # Mini560 buck converter module
-│       └── ...                                # 66 footprints total
+│       ├── DS-04.kicad_mod                    # 4-position DIP slide switch
+│       └── ...                                # 67 footprints total
 ├── 3dmodels/
 │   └── TrailCurrent.3dshapes/                 # 3D models (categorized)
 │       ├── connectors/                        # JST XH STEP+WRL, screw terminal
 │       ├── ics/                               # SN65HVD230DR, MCP2515, IRF4905
 │       ├── modules/                           # Enclosures, MCU modules, sensors
 │       ├── passives/                          # Crystal, inductor
-│       └── power/                             # AP63203WU-7
+│       ├── power/                             # AP63203WU-7
+│       └── switches/                          # DS-04 DIP slide switch
 ├── docs/
 │   ├── ADDING_LIBRARIES.md                    # Guide to adding components
 │   ├── KICAD_CHECKLIST.md                     # Security best practices
@@ -135,11 +137,12 @@ New symbols and footprints are added to these existing libraries — no addition
 | S9B-XH-SM4-TB | JST XH 9-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S9B-XH-SM4-TB |
 | S10B-XH-SM4-TB | JST XH 10-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S10B-XH-SM4-TB |
 | S12B-XH-SM4-TB | JST XH 12-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S12B-XH-SM4-TB |
+| DS-04 | 4-Position DIP slide switch, SPST, 2.54mm pitch | TrailCurrentFootprints:DS-04 |
 | SN65HVD230DR | 3.3V CAN transceiver (Texas Instruments) | TrailCurrentFootprints:SN65HVD230DR |
 
 ### Footprint Library
 
-`footprints/TrailCurrentFootprints.pretty/` contains 66 footprints:
+`footprints/TrailCurrentFootprints.pretty/` contains 67 footprints:
 
 | Component | Footprint(s) |
 |-----------|-------------|
@@ -154,10 +157,11 @@ New symbols and footprints are added to these existing libraries — no addition
 | Crystal Oscillator | HCM4912000000ABJT (HC49S SMD) |
 | Inductor | INDM3225X240N (3225 SMD) |
 | CAN+Power Connector | CAN_PLUS_POWER (4-pad custom) |
+| DIP Switch | DS-04 (4-position, DIP-8 through-hole) |
 
 ### 3D Models
 
-127 model files (STEP, STP, WRL) in `3dmodels/TrailCurrent.3dshapes/`:
+128 model files (STEP, STP, WRL) in `3dmodels/TrailCurrent.3dshapes/`:
 
 | Directory | Contents |
 |-----------|----------|
@@ -166,6 +170,7 @@ New symbols and footprints are added to these existing libraries — no addition
 | `modules/` | Pi5CanAndBuckHat, AirQualityModule, DHT22, ESP32-C6 Super Mini, Mini560, AmazonBuckConverters, Automotive Fuse, trailer-shunt-can-bus |
 | `passives/` | HCM4912000000ABJT (crystal), NLV32T-3R9J-EF (inductor) |
 | `power/` | AP63203WU-7 |
+| `switches/` | DS-04 (4-position DIP slide switch) |
 
 ---
 

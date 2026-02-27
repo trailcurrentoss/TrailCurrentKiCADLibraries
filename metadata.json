@@ -2,7 +2,7 @@
   "$schema": "https://go.kicad.org/pcm/schemas/v1",
   "name": "TrailCurrent Libraries",
   "description": "Symbols, footprints, and 3D models for the TrailCurrent open-source vehicle platform.",
-  "description_full": "Consolidated KiCAD library package for the TrailCurrent open-source vehicle platform.\n\nIncludes custom symbols, footprints, and 3D models for:\n- CAN bus components (MCP2515, SN65HVD230DR)\n- DC-DC converters (AP63203WU-7)\n- Crystals and passives\n- JST XH connector series\n- Custom connectors\n\nFor more information, visit https://trailcurrent.com",
+  "description_full": "Consolidated KiCAD library package for the TrailCurrent open-source vehicle platform.\n\nIncludes custom symbols, footprints, and 3D models for:\n- CAN bus components (MCP2515, SN65HVD230DR)\n- DC-DC converters (AP63203WU-7)\n- Crystals and passives\n- JST XH connector series\n- Custom connectors\n- DIP switches (DS-04)\n\nFor more information, visit https://trailcurrent.com",
   "identifier": "com-trailcurrent-kicad-libraries",
   "type": "library",
   "author": {

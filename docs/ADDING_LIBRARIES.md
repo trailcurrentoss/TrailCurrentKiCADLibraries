@@ -208,7 +208,8 @@ Copy into the appropriate category:
 ├── ics/           # IC and semiconductor models
 ├── modules/       # Multi-component modules and assemblies
 ├── passives/      # Crystals, inductors, capacitors
-└── power/         # Power supply and converter models
+├── power/         # Power supply and converter models
+└── switches/      # DIP switches, slide switches
 ```
 
 Create a new subdirectory if no existing category fits.
