@@ -857,7 +857,7 @@
 		(remove_unused_layers no)
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_XH_S13B-XH-A_1x13_P2.50mm_Horizontal.step"
+	(model "${TRAILCURRENT_3DMODEL_DIR}/connectors/JST_XH_S13B-XH-A_1x13_P2.50mm_Horizontal.step"
 		(offset
 			(xyz 0 0 0)
 		)

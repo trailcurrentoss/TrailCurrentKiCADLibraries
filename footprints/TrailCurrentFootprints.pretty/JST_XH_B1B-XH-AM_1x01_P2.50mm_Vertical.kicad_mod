@@ -466,7 +466,7 @@
 		(roundrect_rratio 0.147059)
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_XH_B1B-XH-AM_1x01_P2.50mm_Vertical.step"
+	(model "${TRAILCURRENT_3DMODEL_DIR}/connectors/JST_XH_B1B-XH-AM_1x01_P2.50mm_Vertical.step"
 		(offset
 			(xyz 0 0 0)
 		)

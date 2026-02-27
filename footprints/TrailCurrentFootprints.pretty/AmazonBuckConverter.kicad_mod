@@ -286,7 +286,7 @@
 		(uuid "8a18499c-2dbd-450f-841d-b274cfb87ce1")
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/Module.3dshapes/AmazonBuckConverters.step"
+	(model "${TRAILCURRENT_3DMODEL_DIR}/modules/AmazonBuckConverters.step"
 		(offset
 			(xyz 13 12 0)
 		)

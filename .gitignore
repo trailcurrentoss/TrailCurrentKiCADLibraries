@@ -52,9 +52,23 @@ fab/
 # Assembly outputs
 *.csv~
 
-# Local agent/development files
-CLAUDE.md
+# Downloaded 3D model source archives
+xh-connectors-*.zip
+xh-connectors-*/
+
+# AI agent configuration (local only — never commit)
+.claude
 .claude/
+CLAUDE.md
+CLAUDE.MD
+.cursorrules
+.cursor/
+.github/copilot*
+.aider*
+.continue/
+.codeium/
+.tabnine*
+.sourcery.yaml
 
 # Don't ignore actual source files
 !.gitkeep

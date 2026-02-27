@@ -447,7 +447,7 @@
 	(embedded_fonts no)
 	(model "${TRAILCURRENT_3DMODEL_DIR}/connectors/JST_XH_S4B-XH-SM4-TB_1x04-1MP_P2.50mm_Horizontal.step"
 		(offset
-			(xyz 0 2.35 0)
+			(xyz -3.75 5 0.1)
 		)
 		(scale
 			(xyz 1 1 1)

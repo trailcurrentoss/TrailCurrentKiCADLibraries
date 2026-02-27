@@ -69,7 +69,11 @@ TrailCurrentKiCADLibraries/
 │       ├── CAN_PLUS_POWER.kicad_mod
 │       ├── JST_XH_B*_Vertical.kicad_mod      # JST XH vertical series
 │       ├── JST_XH_S*_Horizontal.kicad_mod    # JST XH horizontal series
-│       └── ...                                # 54 footprints total
+│       ├── JST_S*B-XH-SM4-TB.kicad_mod       # JST XH SMD series (2-12 pin)
+│       ├── ESP32-C6-SuperMini_TH.kicad_mod   # ESP32-C6 SuperMini (through-hole)
+│       ├── ESP32-C6-SuperMini_SMD.kicad_mod   # ESP32-C6 SuperMini (SMD)
+│       ├── Mini560.kicad_mod                  # Mini560 buck converter module
+│       └── ...                                # 66 footprints total
 ├── 3dmodels/
 │   └── TrailCurrent.3dshapes/                 # 3D models (categorized)
 │       ├── connectors/                        # JST XH STEP+WRL, screw terminal
@@ -117,34 +121,49 @@ New symbols and footprints are added to these existing libraries — no addition
 | Symbol | Description | Footprint |
 |--------|-------------|-----------|
 | AP63203WU-7 | 3.8-32V DC-DC buck converter (Diodes Inc) | TrailCurrentFootprints:AP63203WU7 |
+| ESP32-C6-SuperMini | ESP32-C6 dev board, WiFi 6/BLE 5/Zigbee/Thread | TrailCurrentFootprints:ESP32-C6-SuperMini_TH |
 | HCM4912000000ABJT | 12MHz crystal oscillator HC49S SMD (Citizen) | TrailCurrentFootprints:HCM4912000000ABJT |
 | MCP2515T-I_SO | Stand-alone CAN controller with SPI (Microchip) | TrailCurrentFootprints:MCP2515T-ISO |
+| Mini560 | 5A DC-DC buck converter module, 7-20V to 3.3/5/9/12V | TrailCurrentFootprints:Mini560 |
+| S2B-XH-SM4-TB | JST XH 2-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S2B-XH-SM4-TB |
+| S3B-XH-SM4-TB | JST XH 3-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S3B-XH-SM4-TB |
+| S4B-XH-SM4-TB | JST XH 4-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S4B-XH-SM4-TB |
+| S5B-XH-SM4-TB | JST XH 5-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S5B-XH-SM4-TB |
+| S6B-XH-SM4-TB | JST XH 6-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S6B-XH-SM4-TB |
+| S7B-XH-SM4-TB | JST XH 7-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S7B-XH-SM4-TB |
+| S8B-XH-SM4-TB | JST XH 8-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S8B-XH-SM4-TB |
+| S9B-XH-SM4-TB | JST XH 9-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S9B-XH-SM4-TB |
+| S10B-XH-SM4-TB | JST XH 10-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S10B-XH-SM4-TB |
+| S12B-XH-SM4-TB | JST XH 12-pin SMD connector, 2.50mm pitch | TrailCurrentFootprints:JST_S12B-XH-SM4-TB |
 | SN65HVD230DR | 3.3V CAN transceiver (Texas Instruments) | TrailCurrentFootprints:SN65HVD230DR |
 
 ### Footprint Library
 
-`footprints/TrailCurrentFootprints.pretty/` contains 54 footprints:
+`footprints/TrailCurrentFootprints.pretty/` contains 66 footprints:
 
 | Component | Footprint(s) |
 |-----------|-------------|
 | JST XH Connectors | 46 footprints: 1-20 pin, vertical and horizontal variants |
+| SMD JST XH | JST_S{2,3,4,5,6,7,8,9,10,12}B-XH-SM4-TB (10 variants) |
+| ESP32-C6 SuperMini | ESP32-C6-SuperMini_TH, ESP32-C6-SuperMini_SMD |
+| Mini560 Buck Converter | Mini560 (module footprint) |
 | CAN Bus Controller | MCP2515T-ISO (18-SOIC) |
 | CAN Transceiver | SN65HVD230DR (8-SOIC) |
 | DC-DC Converter | AP63203WU7 (TSOT26) |
+| Amazon Buck Converter | AmazonBuckConverter (module footprint) |
 | Crystal Oscillator | HCM4912000000ABJT (HC49S SMD) |
 | Inductor | INDM3225X240N (3225 SMD) |
 | CAN+Power Connector | CAN_PLUS_POWER (4-pad custom) |
-| SMD JST XH | JST_S4B-XH-SM4-TB, JST_XH_S3B/S4B-SM4-TB |
 
 ### 3D Models
 
-105 model files (STEP, STP, WRL) in `3dmodels/TrailCurrent.3dshapes/`:
+127 model files (STEP, STP, WRL) in `3dmodels/TrailCurrent.3dshapes/`:
 
 | Directory | Contents |
 |-----------|----------|
-| `connectors/` | JST XH series (STEP + WRL pairs), 4-pin screw terminal |
+| `connectors/` | JST XH series (STEP + WRL pairs), JST XH SMD (S2B-S12B-SM4-TB, 10 variants), 4-pin screw terminal |
 | `ics/` | SN65HVD230DR, MCP2515T-I_SO, IRF4905STRLPBF |
-| `modules/` | Pi5CanAndBuckHat, AirQualityModule, DHT22, ESP32-C6 Super Mini, AmazonBuckConverters, Automotive Fuse, trailer-shunt-can-bus |
+| `modules/` | Pi5CanAndBuckHat, AirQualityModule, DHT22, ESP32-C6 Super Mini, Mini560, AmazonBuckConverters, Automotive Fuse, trailer-shunt-can-bus |
 | `passives/` | HCM4912000000ABJT (crystal), NLV32T-3R9J-EF (inductor) |
 | `power/` | AP63203WU-7 |
 
