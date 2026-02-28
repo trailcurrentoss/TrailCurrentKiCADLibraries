@@ -1,0 +1,85 @@
+(footprint "TrailCurrentLogo_Text"
+	(version 20240108)
+	(generator "generate_logo_footprints.py")
+	(generator_version "2.0")
+	(layer "F.Cu")
+	(property "Reference" "LOGO"
+		(at 0 -3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ef5e5574-56f5-43e3-beb5-ed0cd7308f18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "TrailCurrentLogo_Text"
+		(at 0 3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "391a5807-3696-4d16-86dc-d38fdf79fc30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6c10528c-8742-4b0d-9378-0845764e7497")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae098c64-428b-4fd8-9f35-7a3539822371")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "TrailCurrent logo text"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d80e8ba-803c-45f4-94fe-f1ba21edc699")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr board_only exclude_from_pos_files exclude_from_bom)
+	(fp_text user "TrailCurrent"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "5e62c252-d2cc-4e06-a73b-014ba89cfbff")
+		(effects
+			(font
+				(size 1.8 1.8)
+				(thickness 0.18)
+				(bold yes)
+			)
+		)
+	)
+)
