@@ -381,7 +381,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(layer "User.Drawings")
+		(layer "Dwgs.User")
 		(uuid "21b31385-3053-46b4-9ce0-daf3ab9b9dc0")
 	)
 	(fp_line
@@ -391,7 +391,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(layer "User.Drawings")
+		(layer "Dwgs.User")
 		(uuid "c43fa71f-510f-4611-ad17-eb6211b685b8")
 	)
 	(fp_line
@@ -401,7 +401,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(layer "User.Drawings")
+		(layer "Dwgs.User")
 		(uuid "38c32b82-c408-4fda-8195-61e58f5d07a3")
 	)
 	(fp_text user "${REFERENCE}"
