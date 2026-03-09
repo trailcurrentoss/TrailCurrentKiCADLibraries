@@ -2,10 +2,13 @@
 # TrailCurrent KiCAD Libraries — Install Script
 #
 # This script fully registers the TrailCurrent libraries in KiCAD 9.0:
-#   1. Adds TRAILCURRENT_3DMODEL_DIR to KiCAD's path configuration
+#   1. Adds TRAILCURRENT_LIB_DIR and TRAILCURRENT_3DMODEL_DIR to KiCAD paths
 #   2. Adds TrailCurrentSymbolLibrary to the global sym-lib-table
 #   3. Adds TrailCurrentFootprints to the global fp-lib-table
 #   4. Checks snap permissions (if KiCAD is installed via snap)
+#
+# All library table entries use ${TRAILCURRENT_LIB_DIR} so paths are portable
+# across machines and clone locations. Re-run to migrate old absolute paths.
 #
 # Usage:
 #   ./install.sh
@@ -31,9 +34,8 @@ else
     # Check for snap install first (snap uses its own config directory)
     if command -v snap &>/dev/null && snap list kicad &>/dev/null; then
         IS_SNAP=true
-        # Find the current snap revision's config directory
-        SNAP_REV=$(snap list kicad 2>/dev/null | tail -1 | awk '{print $3}')
-        SNAP_CONFIG="${HOME}/snap/kicad/${SNAP_REV}/.config/kicad/9.0"
+        # Use the 'current' symlink so config survives snap revision upgrades
+        SNAP_CONFIG="${HOME}/snap/kicad/current/.config/kicad/9.0"
         if [[ -d "$SNAP_CONFIG" ]]; then
             KICAD_CONFIG="$SNAP_CONFIG"
         fi
@@ -91,14 +93,11 @@ if $IS_SNAP; then
     echo ""
 fi
 
-# --- Step 1: Add 3D model path to kicad_common.json ---
-echo "[1/3] Configuring TRAILCURRENT_3DMODEL_DIR in KiCAD paths..."
+# --- Step 1: Add environment variables to kicad_common.json ---
+echo "[1/3] Configuring KiCAD path variables..."
 
 if [[ -f "$KICAD_COMMON" ]]; then
-    if grep -q "TRAILCURRENT_3DMODEL_DIR" "$KICAD_COMMON"; then
-        echo "  Already configured — skipping."
-    else
-        python3 -c "
+    python3 -c "
 import json
 
 with open('$KICAD_COMMON', 'r') as f:
@@ -109,15 +108,28 @@ if 'environment' not in config:
 if 'vars' not in config['environment']:
     config['environment']['vars'] = {}
 
-config['environment']['vars']['TRAILCURRENT_3DMODEL_DIR'] = '$THREED_PATH'
+changed = False
+vars = config['environment']['vars']
 
-with open('$KICAD_COMMON', 'w') as f:
-    json.dump(config, f, indent=2)
-    f.write('\n')
+if vars.get('TRAILCURRENT_LIB_DIR') != '$REPO_DIR':
+    vars['TRAILCURRENT_LIB_DIR'] = '$REPO_DIR'
+    changed = True
+    print('  Set TRAILCURRENT_LIB_DIR = $REPO_DIR')
+else:
+    print('  TRAILCURRENT_LIB_DIR already set — skipping.')
 
-print('  Added TRAILCURRENT_3DMODEL_DIR to kicad_common.json.')
+if vars.get('TRAILCURRENT_3DMODEL_DIR') != '$THREED_PATH':
+    vars['TRAILCURRENT_3DMODEL_DIR'] = '$THREED_PATH'
+    changed = True
+    print('  Set TRAILCURRENT_3DMODEL_DIR = $THREED_PATH')
+else:
+    print('  TRAILCURRENT_3DMODEL_DIR already set — skipping.')
+
+if changed:
+    with open('$KICAD_COMMON', 'w') as f:
+        json.dump(config, f, indent=2)
+        f.write('\n')
 "
-    fi
 else
     echo "  kicad_common.json not found — skipping."
     echo "  Set manually: KiCAD -> Preferences -> Configure Paths"
@@ -127,7 +139,7 @@ echo ""
 # --- Step 2: Add symbol library ---
 echo "[2/3] Adding TrailCurrentSymbolLibrary to sym-lib-table..."
 
-SYM_ENTRY='  (lib (name "TrailCurrentSymbolLibrary")(type "KiCad")(uri "'"$REPO_DIR"'/symbols/TrailCurrentSymbolLibrary.kicad_sym")(options "")(descr "TrailCurrent custom symbols"))'
+SYM_ENTRY='  (lib (name "TrailCurrentSymbolLibrary")(type "KiCad")(uri "${TRAILCURRENT_LIB_DIR}/symbols/TrailCurrentSymbolLibrary.kicad_sym")(options "")(descr "TrailCurrent custom symbols"))'
 
 if [[ ! -f "$SYM_TABLE" ]]; then
     echo "(sym_lib_table" > "$SYM_TABLE"
@@ -135,7 +147,16 @@ if [[ ! -f "$SYM_TABLE" ]]; then
     echo ")" >> "$SYM_TABLE"
     echo "  Created sym-lib-table with TrailCurrentSymbolLibrary."
 elif grep -q 'name "TrailCurrentSymbolLibrary"' "$SYM_TABLE"; then
-    echo "  Already present — skipping."
+    # Migrate old absolute-path entries to use environment variable
+    if grep 'name "TrailCurrentSymbolLibrary"' "$SYM_TABLE" | grep -qv 'TRAILCURRENT_LIB_DIR'; then
+        sed -i '/name "TrailCurrentSymbolLibrary"/d' "$SYM_TABLE"
+        sed -i '$ s/)$//' "$SYM_TABLE"
+        echo "$SYM_ENTRY" >> "$SYM_TABLE"
+        echo ")" >> "$SYM_TABLE"
+        echo "  Migrated from absolute path to \${TRAILCURRENT_LIB_DIR}."
+    else
+        echo "  Already present — skipping."
+    fi
 else
     sed -i '$ s/)$//' "$SYM_TABLE"
     echo "$SYM_ENTRY" >> "$SYM_TABLE"
@@ -157,7 +178,7 @@ for OLD_NAME in TrailCurrentFootprints_Connectors TrailCurrentFootprints_DCDC Tr
     fi
 done
 
-FP_ENTRY='  (lib (name "TrailCurrentFootprints")(type "KiCad")(uri "'"$REPO_DIR"'/footprints/TrailCurrentFootprints.pretty")(options "")(descr "TrailCurrent custom footprints"))'
+FP_ENTRY='  (lib (name "TrailCurrentFootprints")(type "KiCad")(uri "${TRAILCURRENT_LIB_DIR}/footprints/TrailCurrentFootprints.pretty")(options "")(descr "TrailCurrent custom footprints"))'
 
 if [[ ! -f "$FP_TABLE" ]]; then
     echo "(fp_lib_table" > "$FP_TABLE"
@@ -165,7 +186,16 @@ if [[ ! -f "$FP_TABLE" ]]; then
     echo ")" >> "$FP_TABLE"
     echo "  Created fp-lib-table with TrailCurrentFootprints."
 elif grep -q 'name "TrailCurrentFootprints"' "$FP_TABLE"; then
-    echo "  Already present — skipping."
+    # Migrate old absolute-path entries to use environment variable
+    if grep 'name "TrailCurrentFootprints"' "$FP_TABLE" | grep -qv 'TRAILCURRENT_LIB_DIR'; then
+        sed -i '/name "TrailCurrentFootprints"/d' "$FP_TABLE"
+        sed -i '$ s/)$//' "$FP_TABLE"
+        echo "$FP_ENTRY" >> "$FP_TABLE"
+        echo ")" >> "$FP_TABLE"
+        echo "  Migrated from absolute path to \${TRAILCURRENT_LIB_DIR}."
+    else
+        echo "  Already present — skipping."
+    fi
 else
     sed -i '$ s/)$//' "$FP_TABLE"
     echo "$FP_ENTRY" >> "$FP_TABLE"
@@ -182,6 +212,6 @@ echo ""
 echo "Restart KiCAD, then verify:"
 echo "  - Add Symbol -> search 'AP63203' -> should find AP63203WU-7"
 echo "  - Add Footprint -> search 'MCP2515' -> should find MCP2515T-ISO"
-echo "  - Preferences -> Configure Paths -> TRAILCURRENT_3DMODEL_DIR should appear"
+echo "  - Preferences -> Configure Paths -> TRAILCURRENT_LIB_DIR and TRAILCURRENT_3DMODEL_DIR should appear"
 echo ""
 echo "To update libraries later: git pull (no reinstall needed)."
