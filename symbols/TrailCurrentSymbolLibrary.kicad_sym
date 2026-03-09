@@ -7140,36 +7140,6 @@
 					(effects (font (size 1.27 1.27)))
 				)
 			)
-			(pin bidirectional line
-				(at 30.48 -25.4 180)
-				(length 5.08)
-				(name "GPIO16"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "27"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at 30.48 -27.94 180)
-				(length 5.08)
-				(name "GPIO15"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "28"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
-			(pin bidirectional line
-				(at 30.48 -30.48 180)
-				(length 5.08)
-				(name "GPIO14"
-					(effects (font (size 1.27 1.27)))
-				)
-				(number "29"
-					(effects (font (size 1.27 1.27)))
-				)
-			)
 		)
 		(embedded_fonts no)
 	)
