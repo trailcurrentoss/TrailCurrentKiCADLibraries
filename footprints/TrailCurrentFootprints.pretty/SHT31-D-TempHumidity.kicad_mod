@@ -40,7 +40,7 @@
 	(fp_line (start 7.74 -5.2) (end 7.74 5.2) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "d1a2b3c4-2002-4000-8000-000000000002"))
 	(fp_line (start 7.74 5.2) (end -7.74 5.2) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "d1a2b3c4-2003-4000-8000-000000000003"))
 	(fp_line (start -7.74 5.2) (end -7.74 -5.2) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "d1a2b3c4-2004-4000-8000-000000000004"))
-	(fp_circle (center -7.0 -4.3) (end -6.7 -4.3) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (fill solid) (uuid "d1a2b3c4-2005-4000-8000-000000000001"))
+	(fp_circle (center -8.5 -5.2) (end -8.2 -5.2) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (fill solid) (uuid "d1a2b3c4-2005-4000-8000-000000000001"))
 	(fp_line (start -8.12 -5.58) (end 8.12 -5.58) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "d1a2b3c4-3001-4000-8000-000000000001"))
 	(fp_line (start 8.12 -5.58) (end 8.12 5.58) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "d1a2b3c4-3002-4000-8000-000000000002"))
 	(fp_line (start 8.12 5.58) (end -8.12 5.58) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "d1a2b3c4-3003-4000-8000-000000000003"))
@@ -79,6 +79,6 @@
 	(model "${TRAILCURRENT_3DMODEL_DIR}/modules/SHT31-D-TempHumidity.step"
 		(offset (xyz 0 0 0))
 		(scale (xyz 1 1 1))
-		(rotate (xyz 0 0 0))
+		(rotate (xyz 0 0 -270))
 	)
 )
