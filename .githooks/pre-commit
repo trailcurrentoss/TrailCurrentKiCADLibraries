@@ -38,12 +38,10 @@ check_personal_paths() {
     )
 
     for pattern in "${patterns[@]}"; do
-        if grep -q "$pattern" "$file" 2>/dev/null; then
-            # Allow in examples marked as BAD or in documentation patterns
-            if ! grep "$pattern" "$file" | grep -q "BAD\|bad\|DANGER\|example\|template\|pattern"; then
-                echo -e "${RED}✗ Personal path detected in $file: $pattern${NC}"
-                VIOLATIONS_FOUND=1
-            fi
+        # Find matches but exclude URLs (https://...path...) and documentation patterns
+        if grep "$pattern" "$file" 2>/dev/null | grep -v 'https\?://' | grep -qv "BAD\|bad\|DANGER\|example\|template\|pattern"; then
+            echo -e "${RED}✗ Personal path detected in $file: $pattern${NC}"
+            VIOLATIONS_FOUND=1
         fi
     done
 }
