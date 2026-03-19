@@ -61,7 +61,7 @@
 	(fp_line (start 9.12 8.32) (end 9.12 9.46) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "s3z00002-s020-4000-8000-000000000001"))
 	(fp_line (start 9.12 10.86) (end 9.12 11.87) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "s3z00002-s021-4000-8000-000000000001"))
 	(fp_line (start 9.12 11.87) (end -9.12 11.87) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "s3z00002-s022-4000-8000-000000000001"))
-	(fp_circle (center -8.5 -10.16) (end -8.2 -10.16) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (fill solid) (uuid "s3z00002-s023-4000-8000-000000000001"))
+	(fp_circle (center -9.5 -10.16) (end -9.2 -10.16) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (fill solid) (uuid "s3z00002-s023-4000-8000-000000000001"))
 	(fp_circle (center -7.62 -10.16) (end -7.32 -10.16) (stroke (width 0.1) (type solid)) (layer "F.Fab") (fill solid) (uuid "s3z00002-f008-4000-8000-000000000008"))
 	(fp_line (start -10.5 -12.25) (end 10.5 -12.25) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "s3z00002-c001-4000-8000-000000000001"))
 	(fp_line (start 10.5 -12.25) (end 10.5 12.25) (stroke (width 0.05) (type solid)) (layer "F.CrtYd") (uuid "s3z00002-c002-4000-8000-000000000001"))

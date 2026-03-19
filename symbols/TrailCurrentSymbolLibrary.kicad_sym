@@ -233,325 +233,895 @@
 			)
 			(embedded_fonts no)
 		)
-	(symbol "HCM4912000000ABJT" (in_bom yes) (on_board yes) (pin_names hide)
-	    (property "Reference" "Y" (at 8.89 6.35 0)
-	      (effects (font (size 1.27 1.27)) (justify left top))
-	    )
-	    (property "Value" "HCM4912000000ABJT" (at 8.89 3.81 0)
-	      (effects (font (size 1.27 1.27)) (justify left top))
-	    )
-	    (property "Footprint" "TrailCurrentFootprints:HCM4912000000ABJT" (at 8.89 -96.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Datasheet" "https://datasheet.datasheetarchive.com/originals/dk/DKDS-7/132106.pdf" (at 8.89 -196.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "ki_description" "Crystals 12MHz 18pF HC49S SMD" (at 8.89 -296.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Height" "4.3" (at 8.89 -396.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Mouser Part Number" "695-HCM4912.0ABJT" (at 8.89 -496.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Citizen-FineDevice/HCM4912000000ABJT?qs=byeeYqUIh0OXKKR48pEIVA%3D%3D" (at 8.89 -596.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Manufacturer_Name" "CITIZEN FINEDEVICE" (at 8.89 -696.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Manufacturer_Part_Number" "HCM4912000000ABJT" (at 8.89 -796.19 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (symbol "HCM4912000000ABJT_0_1"
-	      (rectangle
-	        (start 4.064 3.556)
-	        (end 6.096 -3.556)
-	        (stroke (width 0.254) (type default))
-	        (fill (type background))
-	      )
-	      (polyline
-	        (pts
-	          (xy 3.048 2.54)
-	          (xy 3.048 -2.54)
-	        )
-	        (stroke (width 0.254) (type default))
-	        (fill (type none))
-	      )
-	      (polyline
-	        (pts
-	          (xy 7.112 2.54)
-	          (xy 7.112 -2.54)
-	        )
-	        (stroke (width 0.254) (type default))
-	        (fill (type none))
-	      )
-	      (polyline
-	        (pts
-	          (xy 7.112 0)
-	          (xy 7.62 0)
-	        )
-	        (stroke (width 0.254) (type default))
-	        (fill (type none))
-	      )
-	      (polyline
-	        (pts
-	          (xy 3.048 0)
-	          (xy 2.54 0)
-	        )
-	        (stroke (width 0.254) (type default))
-	        (fill (type none))
-	      )
-	      (pin passive line (at 0 0 0) (length 2.54)
-	        (name "CRYSTAL_2" (effects (font (size 1.27 1.27))))
-	        (number "2" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 10.16 0 180) (length 2.54)
-	        (name "" (effects (font (size 1.27 1.27))))
-	        (number "" (effects (font (size 1.27 1.27))))
-	      )
-	    )
-	  )
-	(symbol "SN65HVD230DR" (in_bom yes) (on_board yes)
-	    (property "Reference" "IC" (at 24.13 7.62 0)
-	      (effects (font (size 1.27 1.27)) (justify left top))
-	    )
-	    (property "Value" "SN65HVD230DR" (at 24.13 5.08 0)
-	      (effects (font (size 1.27 1.27)) (justify left top))
-	    )
-	    (property "Footprint" "TrailCurrentFootprints:SN65HVD230DR" (at 24.13 -94.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Datasheet" "http://www.ti.com/lit/gpn/sn65hvd230" (at 24.13 -194.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "ki_description" "3.3 V CAN Transceiver with Standby Mode" (at 24.13 -294.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Height" "1.75" (at 24.13 -394.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Mouser Part Number" "595-SN65HVD230DR" (at 24.13 -494.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN65HVD230DR?qs=QViXGNcIEAtifeQR3pYVUQ%3D%3D" (at 24.13 -594.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "LCSC Part" "C12084" (at 0 0 0)
-	      (effects (font (size 1.27 1.27)) hide)
-	    )
-	    (property "DigiKey Part Number" "296-11654-1-ND" (at 0 0 0)
-	      (effects (font (size 1.27 1.27)) hide)
-	    )
-	    (property "Manufacturer_Name" "Texas Instruments" (at 24.13 -694.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (property "Manufacturer_Part_Number" "SN65HVD230DR" (at 24.13 -794.92 0)
-	      (effects (font (size 1.27 1.27)) (justify left top) hide)
-	    )
-	    (symbol "SN65HVD230DR_0_1"
-	      (rectangle
-	        (start 5.08 2.54)
-	        (end 22.86 -10.16)
-	        (stroke (width 0.254) (type default))
-	        (fill (type background))
-	      )
-	      (pin passive line (at 0 0 0) (length 5.08)
-	        (name "D" (effects (font (size 1.27 1.27))))
-	        (number "1" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 0 -2.54 0) (length 5.08)
-	        (name "GND" (effects (font (size 1.27 1.27))))
-	        (number "2" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 0 -5.08 0) (length 5.08)
-	        (name "VCC" (effects (font (size 1.27 1.27))))
-	        (number "3" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 0 -7.62 0) (length 5.08)
-	        (name "R" (effects (font (size 1.27 1.27))))
-	        (number "4" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 27.94 0 180) (length 5.08)
-	        (name "VREF" (effects (font (size 1.27 1.27))))
-	        (number "5" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 27.94 -2.54 180) (length 5.08)
-	        (name "CANL" (effects (font (size 1.27 1.27))))
-	        (number "6" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 27.94 -5.08 180) (length 5.08)
-	        (name "CANH" (effects (font (size 1.27 1.27))))
-	        (number "7" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin passive line (at 27.94 -7.62 180) (length 5.08)
-	        (name "RS" (effects (font (size 1.27 1.27))))
-	        (number "8" (effects (font (size 1.27 1.27))))
-	      )
-	    )
-	  )
+	(symbol "HCM4912000000ABJT"
+		(pin_names hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "Y"
+			(at 8.89 6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Value" "HCM4912000000ABJT"
+			(at 8.89 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:HCM4912000000ABJT"
+			(at 8.89 -96.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/dk/DKDS-7/132106.pdf"
+			(at 8.89 -196.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "ki_description" "Crystals 12MHz 18pF HC49S SMD"
+			(at 8.89 -296.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Height" "4.3"
+			(at 8.89 -396.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "695-HCM4912.0ABJT"
+			(at 8.89 -496.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Citizen-FineDevice/HCM4912000000ABJT?qs=byeeYqUIh0OXKKR48pEIVA%3D%3D"
+			(at 8.89 -596.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "CITIZEN FINEDEVICE"
+			(at 8.89 -696.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "HCM4912000000ABJT"
+			(at 8.89 -796.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(symbol "HCM4912000000ABJT_0_1"
+			(rectangle
+				(start 4.064 3.556)
+				(end 6.096 -3.556)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.048 2.54)
+					(xy 3.048 -2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.112 2.54)
+					(xy 7.112 -2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.112 0)
+					(xy 7.62 0)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 3.048 0)
+					(xy 2.54 0)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 0 0 0)
+				(length 2.54)
+				(name "CRYSTAL_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 0 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SN65HVD230DR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "IC"
+			(at 24.13 7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Value" "SN65HVD230DR"
+			(at 24.13 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:SN65HVD230DR"
+			(at 24.13 -94.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/gpn/sn65hvd230"
+			(at 24.13 -194.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "ki_description" "3.3 V CAN Transceiver with Standby Mode"
+			(at 24.13 -294.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.75"
+			(at 24.13 -394.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "595-SN65HVD230DR"
+			(at 24.13 -494.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN65HVD230DR?qs=QViXGNcIEAtifeQR3pYVUQ%3D%3D"
+			(at 24.13 -594.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C12084"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey Part Number" "296-11654-1-ND"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Texas Instruments"
+			(at 24.13 -694.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SN65HVD230DR"
+			(at 24.13 -794.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(symbol "SN65HVD230DR_0_1"
+			(rectangle
+				(start 5.08 2.54)
+				(end 22.86 -10.16)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at 0 0 0)
+				(length 5.08)
+				(name "D"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 0)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -5.08 0)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -7.62 0)
+				(length 5.08)
+				(name "R"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 27.94 0 180)
+				(length 5.08)
+				(name "VREF"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 27.94 -2.54 180)
+				(length 5.08)
+				(name "CANL"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 27.94 -5.08 180)
+				(length 5.08)
+				(name "CANH"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 27.94 -7.62 180)
+				(length 5.08)
+				(name "RS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "MCP2515T-I_SO"
-	    (in_bom yes)
-	    (on_board yes)
-	    (property
-	      "Reference"
-	      "U"
-	      (id 0)
-	      (at 0 26.67 0)
-	      (effects (font (size 1.27 1.27) ) )
-	    )
-	    (property
-	      "Value"
-	      "MCP2515T-I/SO"
-	      (id 1)
-	      (at 0 -26.67 0)
-	      (effects (font (size 1.27 1.27) ) )
-	    )
-	    (property
-	      "Footprint"
-	      "TrailCurrentFootprints:MCP2515T-ISO"
-	      (id 2)
-	      (at 0 -29.21 0)
-	      (effects (font (size 1.27 1.27) ) hide)
-	    )
-	    (property
-	      "Datasheet"
-	      "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf"
-	      (id 3)
-	      (at 0 -31.75 0)
-	      (effects (font (size 1.27 1.27) ) hide)
-	    )
-	    (property
-	      "LCSC Part"
-	      "C153782"
-	      (id 5)
-	      (at 0 -34.29 0)
-	      (effects (font (size 1.27 1.27) ) hide)
-	    )
-	    (property "Mouser Part Number" "579-MCP2515T-I/SO" (at 0 0 0)
-	      (effects (font (size 1.27 1.27)) hide)
-	    )
-	    (property "DigiKey Part Number" "MCP2515T-I/SOCT-ND" (at 0 0 0)
-	      (effects (font (size 1.27 1.27)) hide)
-	    )
-	    (symbol "MCP2515T-I_SO_0_1"
-	      (rectangle
-	        (start -13.97 24.13)
-	        (end 13.97 -24.13)
-	        (stroke (width 0) (type default) (color 0 0 0 0))
-	        (fill (type background))
-	      )
-	      (pin output line
-	        (at 19.05 16.51 180)
-	        (length 5.08)
-	        (name "TXCAN" (effects (font (size 1.27 1.27))))
-	        (number "1" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 16.51 0)
-	        (length 5.08)
-	        (name "RXCAN" (effects (font (size 1.27 1.27))))
-	        (number "2" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin output line
-	        (at 19.05 8.89 180)
-	        (length 5.08)
-	        (name "CLKOUT/SOF" (effects (font (size 1.27 1.27))))
-	        (number "3" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 -1.27 0)
-	        (length 5.08)
-	        (name "~{TX0RTS}" (effects (font (size 1.27 1.27))))
-	        (number "4" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 -3.81 0)
-	        (length 5.08)
-	        (name "~{TX1RTS}" (effects (font (size 1.27 1.27))))
-	        (number "5" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 -6.35 0)
-	        (length 5.08)
-	        (name "~{TX2RTS}" (effects (font (size 1.27 1.27))))
-	        (number "6" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin output line
-	        (at -19.05 -13.97 0)
-	        (length 5.08)
-	        (name "OSC2" (effects (font (size 1.27 1.27))))
-	        (number "7" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 -11.43 0)
-	        (length 5.08)
-	        (name "OSC1" (effects (font (size 1.27 1.27))))
-	        (number "8" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin power_in line
-	        (at -19.05 -21.59 0)
-	        (length 5.08)
-	        (name "VSS" (effects (font (size 1.27 1.27))))
-	        (number "9" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin output line
-	        (at 19.05 -3.81 180)
-	        (length 5.08)
-	        (name "~{RX1BF}" (effects (font (size 1.27 1.27))))
-	        (number "10" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin output line
-	        (at 19.05 -1.27 180)
-	        (length 5.08)
-	        (name "~{RX0BF}" (effects (font (size 1.27 1.27))))
-	        (number "11" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin output line
-	        (at 19.05 21.59 180)
-	        (length 5.08)
-	        (name "~{INT}" (effects (font (size 1.27 1.27))))
-	        (number "12" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 8.89 0)
-	        (length 5.08)
-	        (name "SCK" (effects (font (size 1.27 1.27))))
-	        (number "13" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 6.35 0)
-	        (length 5.08)
-	        (name "SI" (effects (font (size 1.27 1.27))))
-	        (number "14" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin output line
-	        (at -19.05 3.81 0)
-	        (length 5.08)
-	        (name "SO" (effects (font (size 1.27 1.27))))
-	        (number "15" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 11.43 0)
-	        (length 5.08)
-	        (name "~{CS}" (effects (font (size 1.27 1.27))))
-	        (number "16" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin unspecified line
-	        (at -19.05 21.59 0)
-	        (length 5.08)
-	        (name "~{RESET}" (effects (font (size 1.27 1.27))))
-	        (number "17" (effects (font (size 1.27 1.27))))
-	      )
-	      (pin power_in line
-	        (at -19.05 -19.05 0)
-	        (length 5.08)
-	        (name "VDD" (effects (font (size 1.27 1.27))))
-	        (number "18" (effects (font (size 1.27 1.27))))
-	      )
-	    )
-	  )
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP2515T-I/SO"
+			(at 0 -26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:MCP2515T-ISO"
+			(at 0 -29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP2515-Stand-Alone-CAN-Controller-with-SPI-20001801J.pdf"
+			(at 0 -31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C153782"
+			(at 0 -34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "579-MCP2515T-I/SO"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey Part Number" "MCP2515T-I/SOCT-ND"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "MCP2515T-I_SO_0_1"
+			(rectangle
+				(start -13.97 24.13)
+				(end 13.97 -24.13)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin output line
+				(at 19.05 16.51 180)
+				(length 5.08)
+				(name "TXCAN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 16.51 0)
+				(length 5.08)
+				(name "RXCAN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 8.89 180)
+				(length 5.08)
+				(name "CLKOUT/SOF"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 -1.27 0)
+				(length 5.08)
+				(name "~{TX0RTS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 -3.81 0)
+				(length 5.08)
+				(name "~{TX1RTS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 -6.35 0)
+				(length 5.08)
+				(name "~{TX2RTS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -19.05 -13.97 0)
+				(length 5.08)
+				(name "OSC2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 -11.43 0)
+				(length 5.08)
+				(name "OSC1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -19.05 -21.59 0)
+				(length 5.08)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 -3.81 180)
+				(length 5.08)
+				(name "~{RX1BF}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 -1.27 180)
+				(length 5.08)
+				(name "~{RX0BF}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 21.59 180)
+				(length 5.08)
+				(name "~{INT}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 8.89 0)
+				(length 5.08)
+				(name "SCK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 6.35 0)
+				(length 5.08)
+				(name "SI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -19.05 3.81 0)
+				(length 5.08)
+				(name "SO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 11.43 0)
+				(length 5.08)
+				(name "~{CS}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at -19.05 21.59 0)
+				(length 5.08)
+				(name "~{RESET}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -19.05 -19.05 0)
+				(length 5.08)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "S4B-XH-SM4-TB"
 		(pin_names
 			(offset 1.016)
@@ -9259,6 +9829,878 @@
 			(pin passive line
 				(at 0 -3.81 90)
 				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SMBJ24A-13-F"
+		(pin_names hide)
+		(pin_numbers hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 2.54 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMBJ24A-13-F"
+			(at 2.54 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:SMBJ24A-13-F"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds19002.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600W TVS Diode, 24V Standoff, 38.9V Clamp, SMB, Diodes Inc"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C135060"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SMBJ24A-13-F"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SMBJ24A-13-F_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27)
+					(xy 1.27 0)
+					(xy -1.27 -1.27)
+					(xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27)
+					(xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27)
+					(xy 1.651 1.651)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.889 -1.651)
+					(xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SS34"
+		(pin_names hide)
+		(pin_numbers hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 2.54 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34"
+			(at 2.54 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:SS34"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.microdiode.com"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "3A 40V Schottky Barrier Rectifier, SMA, MDD"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C8678"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "MDD"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SS34"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SS34_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27)
+					(xy 1.27 0)
+					(xy -1.27 -1.27)
+					(xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27)
+					(xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27)
+					(xy 0.889 1.27)
+					(xy 0.889 0.889)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27)
+					(xy 1.651 -1.27)
+					(xy 1.651 -0.889)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "AP74700AQ"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -7.62 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AP74700AQ"
+			(at -7.62 7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:AP74700AQ"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP74700AQ.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "+70V/-65V Automotive Ideal Diode Controller, SOT-26, Diodes Inc"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "AP74700AQ"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "AP74700AQ_0_1"
+			(rectangle
+				(start -7.62 6.35)
+				(end 7.62 -8.89)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -10.16 3.81 0)
+				(length 2.54)
+				(name "VCP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -11.43 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 1.27 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 3.81 180)
+				(length 2.54)
+				(name "CATHODE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 1.27 180)
+				(length 2.54)
+				(name "GATE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 10.16 -1.27 180)
+				(length 2.54)
+				(name "ANODE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SMBJ24CA-13-F"
+		(pin_names hide)
+		(pin_numbers hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 2.54 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMBJ24CA-13-F"
+			(at 2.54 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:SMBJ24CA-13-F"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds19002.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "600W Bidirectional TVS Diode, 24V Standoff, 38.9V Clamp, SMB"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C83268"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Littelfuse"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SMBJ24CA"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SMBJ24CA-13-F_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27)
+					(xy 0 0)
+					(xy -1.27 -1.27)
+					(xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27)
+					(xy 0 0)
+					(xy 1.27 1.27)
+					(xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27)
+					(xy 0 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27)
+					(xy 0.381 1.651)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -1.27)
+					(xy -0.381 -1.651)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "BLM31PG121SN1L"
+		(pin_names hide)
+		(pin_numbers hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "FB"
+			(at 0 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BLM31PG121SN1L"
+			(at 0 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TrailCurrentFootprints:BLM31PG121SN1L"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/products/productdata/8796738650142/ENFA0004.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "120 Ohm Ferrite Bead, 1206, 3.5A, muRata"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C85841"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "muRata"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "BLM31PG121SN1L"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "BLM31PG121SN1L_0_1"
+			(rectangle
+				(start -2.54 1.016)
+				(end 2.54 -1.016)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -1.016)
+					(xy 2.54 1.016)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
 				(name "2"
 					(effects
 						(font
